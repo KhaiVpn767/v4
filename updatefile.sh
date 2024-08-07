@@ -8,7 +8,7 @@ sleep 2
 rm -rf menu
 rm -rf menu-trial
 rm -rf menu-vmess
-rm -rf menu-vlesss
+rm -rf menu-vless
 rm -rf running
 rm -rf clearcache
 rm -rf menu-trgo
