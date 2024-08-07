@@ -244,9 +244,9 @@ echo -e "${BIYellow} ┌──────────────────�
 echo -e "${BIYellow} │$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
 echo -e "${BIYellow} └─────────────────────────────────────────────────────┘${NC}"
 echo -e " ${BIYellow}┌─────────────────────────────────────┐${NC}"
-echo -e " ${BIYellow}│  Version      ${NC} : Ver4. Last Update"
-echo -e " ${BIYellow}│  User       ${NC}   :\033[1;36m $Name \e[0m"
-echo -e " ${BIYellow}│  Expiry script${NC} : ${BIYellow}$useexp${NC} Days"
+echo -e " ${BIYellow}│  Version      ${NC} : ${white} Ver4. Last Update${NC}"
+echo -e " ${BIYellow}│  User       ${NC}   : ${white} $Name${NC}"
+echo -e " ${BIYellow}│  Expiry script${NC} : ${BIYellow}$useexp${NC}: ${BIRed}Days${NC}"
 echo -e " ${BIYellow}└─────────────────────────────────────┘${NC}"
 echo
 read -p " Select menu : " opt
