@@ -275,7 +275,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "===============-[ Script By IMMANVPN ]-==============="
+echo "===============-[ Script By khaiVPN ]-==============="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
