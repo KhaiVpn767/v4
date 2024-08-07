@@ -16,7 +16,7 @@ checking_sc() {
         echo -e "   \033[0;33mYour VPS\033[0m $ipsaya \033[0;33mHas been Banned\033[0m"
         echo -e "     \033[0;33mBuy access permissions for scripts\033[0m"
         echo -e "             \033[0;33mContact Your Admin \033[0m"
-        echo -e "     \033[0;36mTelegram\033[0m: https://t.me/owner-khaiVPN"
+        echo -e "     \033[0;36mTelegram\033[0m: https://t.me/ownerimmanvpn"
         echo -e "\033[1;36m└─────────────────────────────────────────────────┘\033[0m"
         exit
     fi
@@ -205,18 +205,16 @@ menu
 export sem=$( curl -s https://raw.githubusercontent.com/artanodrop/permission/main/versions)
 #export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
-nsdomain1=$(cat /root/nsdomain)
 clear
 echo -e ""
 echo -e ""
-echo -e "                 ${BICyan}Premium Script : ${BIPurple}khaiVPN${NC}"
-echo -e "              ${BICyan} SCRIPT MULTI V4.0 STABILE ${NC}"
+echo -e "                 ${BICyan}Premium Script : ${BIPurple}IMMANVPN${NC}"
+echo -e "              ${BICyan} SCRIPT MULTI V3.6 STABILE ${NC}"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan} │                  ${BIWhite}${UWhite}Informations${NC}"
 echo -e "${BICyan} │====================================================="
 echo -e " ${BICyan}│  ${BICyan}Use Core        :  ${BIPurple}XRAY${NC}"
 echo -e " ${BICyan}│  ${BICyan}Current Domain  :  ${BIPurple}$(cat /etc/xray/domain)${NC}"
-echo -e " ${BICyan}│  ${BICyan}Name Server(NS) :  ${BIPurple}$nsdomain1"
 echo -e " ${BICyan}│  ${BICyan}IP-VPS          :  ${BIYellow}$IPVPS${NC}"
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
@@ -239,7 +237,7 @@ echo -e "${BICyan} ┌───────────────────�
 echo -e "${BICyan} │$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
 echo -e "${BICyan} └─────────────────────────────────────────────────────┘${NC}"
 echo -e " ${BICyan}┌─────────────────────────────────────┐${NC}"
-echo -e " ${BICyan}│  Version      ${NC} : Ver4. Last Update"
+echo -e " ${BICyan}│  Version      ${NC} : Ver3. Last Update"
 echo -e " ${BICyan}│  User       ${NC}   :\033[1;36m $Name \e[0m"
 echo -e " ${BICyan}│  Expiry script${NC} : ${BIYellow}$useexp${NC} Days"
 echo -e " ${BICyan}└─────────────────────────────────────┘${NC}"
@@ -247,19 +245,19 @@ echo
 read -p " Select menu : " opt
 echo -e ""
 case $opt in
-•1) clear ; menu-sshh ;;
-•2) clear ; menu-vmess ;;
-•3) clear ; menu-vless ;;
-•4) clear ; menu-trgo ;;
-•5) clear ; menu-trojan ;;
-•6) clear ; rm -rf /root/updatefile.sh && wget https://raw.githubusercontent.com/KhaiVpn767/v4/main/updatefile.sh && chmod +x updatefile.sh && ./updatefile.sh ;;
-•7) clear ; status ;;
-•8) clear ; restarts ;;
-•9) clear ; menu-backup ;;
+1) clear ; menu-sshh ;;
+2) clear ; menu-vmess ;;
+3) clear ; menu-vless ;;
+4) clear ; menu-trgo ;;
+5) clear ; menu-trojan ;;
+6) clear ; rm -rf /root/updatefile.sh && wget https://raw.githubusercontent.com/KhaiVpn767/v4/main/updatefile.sh && chmod +x updatefile.sh && ./updatefile.sh ;;
+7) clear ; status ;;
+8) clear ; restarts ;;
+9) clear ; menu-backup ;;
 10) clear ; wget https://raw.githubusercontent.com/KhaiVpn767/v4/main/install-bot.sh && chmod +x install-bot.sh && ./install-bot.sh ;;
 11) clear ; menu-set ;;
 12) clear ; bot ;;
 00) clear ; menu ;;
-•x) exit ;;
+x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; exit ;;
 esac
