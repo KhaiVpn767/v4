@@ -87,7 +87,7 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 echo -e ""
 echo -e " [\e[36m•1\e[0m] Buat Vless "
 echo -e " [\e[36m•2\e[0m] Buat Trial "
-echo -e " [\e[36m•2\e[0m] Ubah Akun Vless "
+echo -e " [\e[36m•3\e[0m] Ubah Akun Vless "
 echo -e " [\e[36m•3\e[0m] Hapus Akun Vless "
 echo -e " [\e[36m•4\e[0m] Cek User Login Vless "
 echo -e " [\e[31m•0\e[0m] \e[31mBACK TO MENU\033[0m"
