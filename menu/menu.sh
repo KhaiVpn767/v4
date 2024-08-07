@@ -205,6 +205,7 @@ menu
 export sem=$( curl -s https://raw.githubusercontent.com/artanodrop/permission/main/versions)
 #export pak=$( cat /home/.ver)
 IPVPS=$(curl -s ipinfo.io/ip )
+nsdomain1=$(cat /root/nsdomain)
 clear
 echo -e ""
 echo -e ""
@@ -215,6 +216,7 @@ echo -e "${BICyan} │                  ${BIWhite}${UWhite}Informations${NC}"
 echo -e "${BICyan} │====================================================="
 echo -e " ${BICyan}│  ${BICyan}Use Core        :  ${BIPurple}XRAY${NC}"
 echo -e " ${BICyan}│  ${BICyan}Current Domain  :  ${BIPurple}$(cat /etc/xray/domain)${NC}"
+echo -e " ${BICyan}│  ${BICyan}Name Server(NS) :  ${BIPurple}$nsdomain1"{NC}"
 echo -e " ${BICyan}│  ${BICyan}IP-VPS          :  ${BIYellow}$IPVPS${NC}"
 echo -e " ${BICyan}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
