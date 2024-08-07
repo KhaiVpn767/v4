@@ -16,7 +16,6 @@ checking_sc() {
         echo -e "   \033[0;33mYour VPS\033[0m $ipsaya \033[0;33mHas been Banned\033[0m"
         echo -e "     \033[0;33mBuy access permissions for scripts\033[0m"
         echo -e "             \033[0;33mContact Your Admin \033[0m"
-        echo -e "     \033[0;36mTelegram\033[0m: https://t.me/owner-khaiVPN"
         echo -e "\033[1;36m└─────────────────────────────────────────────────┘\033[0m"
         exit
     fi
@@ -220,6 +219,7 @@ echo -e "${BIYellow} │                  ${BIWhite}${UWhite}Informations${NC}"
 echo -e "${BIYellow} │====================================================="
 echo -e " ${BIYellow}│  ${BIWhite}Use Core        :  ${BIWhite}XRAY${NC}"
 echo -e " ${BIYellow}│  ${BIWhite}Current Domain  :  ${BIWhite}$(cat /etc/xray/domain)${NC}"
+echo -e " ${BIYellow}│  ${BIWhite}NS Domain       :  ${BIYellow}$(cat /root/nsdomain)${NC}"
 echo -e " ${BIYellow}│  ${BIWhite}IP-VPS          :  ${BIYellow}$IPVPS${NC}"
 echo -e " ${BIYellow}└─────────────────────────────────────────────────────┘${NC}"
 echo -e "     ${BICyan} SSH ${NC}: $ressh"" ${BICyan} NGINX ${NC}: $resngx"" ${BICyan}  XRAY ${NC}: $resv2r"" ${BICyan} TROJAN ${NC}: $resv2r"
