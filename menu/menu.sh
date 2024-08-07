@@ -209,7 +209,7 @@ clear
 echo -e ""
 echo -e ""
 echo -e "                 ${BICyan}Premium Script : ${BIPurple}khaiVPN${NC}"
-echo -e "              ${BICyan} SCRIPT MULTI V3.6 STABILE ${NC}"
+echo -e "              ${BICyan} SCRIPT MULTI V4.0 STABILE ${NC}"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan} │                  ${BIWhite}${UWhite}Informations${NC}"
 echo -e "${BICyan} │====================================================="
