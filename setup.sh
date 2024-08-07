@@ -186,7 +186,7 @@ echo -e "$green          Install SLDNS              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 sleep 2
 clear
-wget https://raw.githubusercontent.com/Andyvpn/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
+wget https://raw.githubusercontent.com/KhaiVpn767/SlowDnsV1/main/dns2.sh && chmod +x dns2.sh && ./dns2.sh
 clear
 
 #Instal udp
@@ -234,7 +234,7 @@ gg="AM"
 fi
 curl -sS ifconfig.me > /etc/myipvps
 echo " "
-echo "=====================-[ IMMANVPN PREMIUM ]-===================="
+echo "====================-[ khaiVPN PREMIUM ]-==================="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
