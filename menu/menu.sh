@@ -16,7 +16,7 @@ checking_sc() {
         echo -e "   \033[0;33mYour VPS\033[0m $ipsaya \033[0;33mHas been Banned\033[0m"
         echo -e "     \033[0;33mBuy access permissions for scripts\033[0m"
         echo -e "             \033[0;33mContact Your Admin \033[0m"
-        echo -e "     \033[0;36mTelegram\033[0m: https://t.me/ownerimmanvpn"
+        echo -e "     \033[0;36mTelegram\033[0m: https://t.me/owner-khaiVPN"
         echo -e "\033[1;36m└─────────────────────────────────────────────────┘\033[0m"
         exit
     fi
@@ -208,7 +208,7 @@ IPVPS=$(curl -s ipinfo.io/ip )
 clear
 echo -e ""
 echo -e ""
-echo -e "                 ${BICyan}Premium Script : ${BIPurple}IMMANVPN${NC}"
+echo -e "                 ${BICyan}Premium Script : ${BIPurple}khaiVPN${NC}"
 echo -e "              ${BICyan} SCRIPT MULTI V3.6 STABILE ${NC}"
 echo -e "${BICyan} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BICyan} │                  ${BIWhite}${UWhite}Informations${NC}"
