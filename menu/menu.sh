@@ -216,7 +216,7 @@ echo -e ""
 echo -e "                 ${BIPurple}Premium Script : ${BIPurple}khaiVPN" | lolcat
 echo -e "              ${BIPurple} SCRIPT MULTI V4.0 STABILE " | lolcat
 echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
-echo -e "${BIYellow} │                  ${BIWhite}${UWhite}Informations" | lolcat
+echo -e "${BIYellow} │                  ${BIWhite}${UWhite}Informations.             |" | lolcat
 echo -e "${BIYellow} │=====================================================" | lolcat
 echo -e " ${BIYellow}│  ${BIWhite}Use Core        :  ${BIWhite}XRAY" | lolcat
 echo -e "${BIYellow} |  ${BIWhite}CPU Usage       :  $cpu_usage" | lolcat
