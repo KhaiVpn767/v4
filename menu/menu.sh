@@ -233,8 +233,8 @@ echo -e "${BIYellow} │${NC}${BICyan} [•1]${NC}📨 ${white} SSH${NC}        
 echo -e "${BIYellow} │${NC}${BICyan} [•2]${NC}📨 ${white} VMESS${NC}        " "${BICyan}[•8]${NC}📨 ${white} RESTR SERVICE${NC}"           
 echo -e "${BIYellow} │${NC}${BICyan} [•3]${NC}📨 ${white} VLESS${NC}        " "${BICyan}[•9]${NC}📨 ${white} BACKUP MENU${NC}  "                   
 echo -e "${BIYellow} │${NC}${BICyan} [•4]${NC}📨 ${white} TROJAN-GO${NC}    " "${BICyan}[10]${NC}📨 ${white} CLEAR Ram${NC} "                 
-echo -e "${BIYellow} │${NC}${BICyan} [•5]${NC}📨 ${white} TROJAN-WS${NC}    " "${BICyan}[11]${NC}📨 ${white} MENU SETINGS${NC} " 
-echo -e "${BIYellow} │${NC}${BICyan} [•6]${NC}📨 ${white} Update Menu${NC}  " "${BICyan}[12]${NC}📨 ${white} check port${NC} "   
+echo -e "${BIYellow} │${NC}${BICyan} [•5]${NC}📨 ${white} TROJAN-WS${NC}    " "${BICyan}[11]${NC}📨 ${white} UPDATE${NC} " 
+echo -e "${BIYellow} │${NC}${BICyan} [•6]${NC}📨 ${white} MENU SETINGS${NC}  " "${BICyan}[12]${NC}📨 ${white} check port${NC} "   
 echo -e "${BIYellow} └──────────────────────────────────────────────────────┘${NC}" 
 echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIYellow} │  \033[0m ${BOLD}${GREEN}XXX${BIYellow} SSH${GREEN}  XXX  ${BIYellow}VMESS  ${GREEN}XXX  ${BIYellow}VLESS  ${GREEN}XXX  ${BIYellow}TROJAN${GREEN} XXX $NC "
@@ -257,12 +257,12 @@ case $opt in
 3) clear ; menu-vless ;;
 4) clear ; menu-trgo ;;
 5) clear ; menu-trojan ;;
-6) clear ; rm -rf /root/updatefile.sh && wget https://raw.githubusercontent.com/KhaiVpn767/v4/main/updatefile.sh && chmod +x updatefile.sh && ./updatefile.sh ;;
+6) clear ; menu-set ;;
 7) clear ; status ;;
 8) clear ; restarts ;;
 9) clear ; menu-backup ;;
 10) clear ; clearcache ;;
-11) clear ; menu-set ;;
+11) clear ; rm -rf /root/updatefile.sh && wget https://raw.githubusercontent.com/KhaiVpn767/v4/main/updatefile.sh && chmod +x updatefile.sh && ./updatefile.sh ;;
 12) clear ; about ;;
 00) clear ; menu ;;
 x) exit ;;
