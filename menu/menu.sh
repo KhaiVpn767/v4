@@ -220,12 +220,12 @@ echo -e "              ${BIPurple} SCRIPT MULTI V4.0 STABILE " | lolcat
 echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
 echo -e "${BIYellow} │                     Informations                    |"
 echo -e "${BIYellow} │=====================================================|" | lolcat
-echo -e "${BIYellow} | | lolcat  ${BIWhite}Time Zone       :  $WKT${NC}"
-echo -e " ${BIYellow}│ | lolcat  ${BIWhite}Use Core        :  ${BIWhite}XRAY${NC}"
-echo -e "${BIYellow} | | lolcat  ${BIWhite}CPU Usage       :  $cpu_usage${NC}"
-echo -e " ${BIYellow}│ | lolcat  ${BIWhite}Current Domain  :  ${BIWhite}$(cat /etc/xray/domain)${NC}"
-echo -e " ${BIYellow}│ | lolcat  ${BIWhite}NS Domain       :  ${BIYellow}$(cat /root/nsdomain)${NC}"
-echo -e " ${BIYellow}│ | lolcat  ${BIWhite}IP-VPS          :  ${BIRed}$IPVPS "
+echo -e "${BIYellow} | ${BIWhite}Time Zone       :  $WKT${NC}"
+echo -e " ${BIYellow}│ ${BIWhite}Use Core        :  ${BIWhite}XRAY${NC}"
+echo -e "${BIYellow} | ${BIWhite}CPU Usage       :  $cpu_usage${NC}"
+echo -e " ${BIYellow}│ ${BIWhite}Current Domain  :  ${BIWhite}$(cat /etc/xray/domain)${NC}"
+echo -e " ${BIYellow}│ ${BIWhite}NS Domain       :  ${BIYellow}$(cat /root/nsdomain)${NC}"
+echo -e " ${BIYellow}│ ${BIWhite}IP-VPS          :  ${BIRed}$IPVPS "
 echo -e " ${BIYellow}└─────────────────────────────────────────────────────┘" | lolcat
 echo -e "     ${BIPurple} SSH ${NC}: $ressh"" ${BIPurple} NGINX ${NC}: $resngx"" ${BIPurple}  XRAY ${NC}: $resv2r"" ${BIPurple} TROJAN ${NC}: $resv2r" | lolcat
 echo -e "   ${BIPurple}     STUNNEL ${NC}: $resst" "${BIPurple} DROPBEAR ${NC}: $resdbr" "${BIPurple} SSH-WS ${NC}: $ressshws" | lolcat
@@ -240,16 +240,16 @@ echo -e "${BIYellow} │${NC}${BIPurple} [•5]${NC}📨 ${BIWhite} TROJAN-WS${N
 echo -e "${BIYellow} │${NC}${BIPurple} [•6]${NC}📨 ${BIWhite} MENU SETINGS${NC}    " "${BIPurple}[12]${NC}📨 ${BIWhite} check port${NC} " | lolcat
 echo -e "${BIYellow} └──────────────────────────────────────────────────────┘" | lolcat 
 echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
-echo -e "${BIYellow} │ | lolcat  \033[0m ${BOLD}${GREEN}XXX${BIYellow} SSH${GREEN}  XXX  ${BIYellow}VMESS  ${GREEN}XXX  ${BIYellow}VLESS  ${GREEN}XXX  ${BIYellow}TROJAN${GREEN} XXX ${NC} "
-echo -e "${BIYellow} │ | lolcat  \033[0m ${Blue}     $ssh1          $vma           $vla            $tra              "
+echo -e "${BIYellow} │ \033[0m ${BOLD}${GREEN}XXX${BIYellow} SSH${GREEN}  XXX  ${BIYellow}VMESS  ${GREEN}XXX  ${BIYellow}VLESS  ${GREEN}XXX  ${BIYellow}TROJAN${GREEN} XXX ${NC} "
+echo -e "${BIYellow} │ \033[0m ${Blue}     $ssh1          $vma           $vla            $tra              "
 echo -e "${BIYellow} └─────────────────────────────────────────────────────┘" | lolcat
 echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
 echo -e "${BIYellow} │$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
 echo -e "${BIYellow} └─────────────────────────────────────────────────────┘" | lolcat
 echo -e " ┌─────────────────────────────────────┐" | lolcat
-echo -e " │" | lolcat  Version      ${NC} : ${BIPurple} Ver4. Last Update"
-echo -e " │" | lolcat  User       ${NC}   : ${BIWhite} $Name"
-echo -e " │" | lolcat  Expiry script${NC} : ${BIYellow} $useexp"
+echo -e " │ Version      ${NC} : ${BIPurple} Ver4. Last Update"
+echo -e " │ User       ${NC}   : ${BIWhite} $Name"
+echo -e " │ Expiry script${NC} : ${BIYellow} $useexp"
 echo -e " └─────────────────────────────────────┘" | lolcat
 echo
 read -p " Select menu : " opt
