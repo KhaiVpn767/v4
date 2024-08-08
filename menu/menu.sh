@@ -263,7 +263,7 @@ case $opt in
 9) clear ; menu-backup ;;
 10) clear ; wget https://raw.githubusercontent.com/KhaiVpn767/v4/main/install-bot.sh && chmod +x install-bot.sh && ./install-bot.sh ;;
 11) clear ; menu-set ;;
-12) clear ; about.sh ;;
+12) clear ; about ;;
 00) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; exit ;;
