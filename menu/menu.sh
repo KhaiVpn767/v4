@@ -220,12 +220,12 @@ echo -e "              ${BIPurple} SCRIPT MULTI V4.0 STABILE " | lolcat
 echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
 echo -e "${BIYellow} │                     Informations                    |"
 echo -e "${BIYellow} │=====================================================|" | lolcat
-echo -e "${BIYellow} |  ${BIWhite}Current Time    :  ${GREEN}$( date -d "0 days" +"%d-%m-%Y | %X" )" | lolcat
-echo -e "${BIYellow} |  ${BIWhite}Time Zone       :  $WKT" | lolcat
-echo -e " ${BIYellow}│  ${BIWhite}Use Core        :  ${BIWhite}XRAY" | lolcat
-echo -e "${BIYellow} |  ${BIWhite}CPU Usage       :  $cpu_usage" | lolcat
-echo -e " ${BIYellow}│  ${BIWhite}Current Domain  :  ${BIWhite}$(cat /etc/xray/domain)" | lolcat
-echo -e " ${BIYellow}│  ${BIWhite}NS Domain       :  ${BIYellow}$(cat /root/nsdomain)" | lolcat
+echo -e "${BIYellow} |  ${BIWhite}Current Time    :  ${GREEN}$( date -d "0 days")${NC}"
+echo -e "${BIYellow} |  ${BIWhite}Time Zone       :  $WKT${NC}"
+echo -e " ${BIYellow}│  ${BIWhite}Use Core        :  ${BIWhite}XRAY${NC}"
+echo -e "${BIYellow} |  ${BIWhite}CPU Usage       :  $cpu_usage${NC}"
+echo -e " ${BIYellow}│  ${BIWhite}Current Domain  :  ${BIWhite}$(cat /etc/xray/domain)${NC}"
+echo -e " ${BIYellow}│  ${BIWhite}NS Domain       :  ${BIYellow}$(cat /root/nsdomain)${NC}"
 echo -e " ${BIYellow}│  ${BIWhite}IP-VPS          :  ${BIRed}$IPVPS "
 echo -e " ${BIYellow}└─────────────────────────────────────────────────────┘" | lolcat
 echo -e "     ${BIPurple} SSH ${NC}: $ressh"" ${BIPurple} NGINX ${NC}: $resngx"" ${BIPurple}  XRAY ${NC}: $resv2r"" ${BIPurple} TROJAN ${NC}: $resv2r" | lolcat
