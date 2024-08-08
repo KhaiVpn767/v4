@@ -244,9 +244,9 @@ echo -e "${BIYellow} ┌──────────────────�
 echo -e "${BIYellow} │$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
 echo -e "${BIYellow} └─────────────────────────────────────────────────────┘" | lolcat
 echo -e " ┌─────────────────────────────────────┐" | lolcat
-echo -e " │  Version      ${NC} : ${BIPurple} Ver4. Last Update" | lolcat
-echo -e " │  User       ${NC}   : ${BIWhite} $Name" | lolcat
-echo -e " │  Expiry script${NC} : ${BIYellow} $useexp" | lolcat
+echo -e " │  Version      ${NC} : ${BIPurple} Ver4. Last Update
+echo -e " │  User       ${NC}   : ${BIWhite} $Name"
+echo -e " │  Expiry script${NC} : ${BIYellow} $useexp"
 echo -e " └─────────────────────────────────────┘" | lolcat
 echo
 read -p " Select menu : " opt
