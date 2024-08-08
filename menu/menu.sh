@@ -227,8 +227,8 @@ echo -e " ${BIYellow}│ ${BIWhite}Current Domain  :  ${BIWhite}$(cat /etc/xray/
 echo -e " ${BIYellow}│ ${BIWhite}NS Domain       :  ${BIYellow}$(cat /root/nsdomain)${NC}"
 echo -e " ${BIYellow}│ ${BIWhite}IP-VPS          :  ${BIRed}$IPVPS "
 echo -e " ${BIYellow}└─────────────────────────────────────────────────────┘" | lolcat
-echo -e "     ${BIPurple} SSH ${NC}: $ressh"" ${BIPurple} NGINX ${NC}: $resngx"" ${BIPurple}  XRAY ${NC}: $resv2r"" ${BIPurple} TROJAN ${NC}: $resv2r${NC}"
-echo -e "   ${BIPurple}     STUNNEL ${NC}: $resst" "${BIPurple} DROPBEAR ${NC}: $resdbr" "${BIPurple} SSH-WS ${NC}: $ressshws${NC}"
+echo -e "     ${BIWhite} SSH ${NC}: $ressh"" ${BIWhite} NGINX ${NC}: $resngx"" ${BIWhite}  XRAY ${NC}: $resv2r"" ${BIWhite} TROJAN ${NC}: $resv2r${NC}"
+echo -e "   ${BIWhite}     STUNNEL ${NC}: $resst" "${BIWhite} DROPBEAR ${NC}: $resdbr" "${BIWhite} SSH-WS ${NC}: $ressshws${NC}"
 echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
 echo -e "${BIYellow} │                      OTHER MENU                     │ "
 echo -e "${BIYellow} │=====================================================│" | lolcat
