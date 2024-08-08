@@ -243,11 +243,11 @@ echo -e "${BIYellow} └──────────────────�
 echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIYellow} │$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
 echo -e "${BIYellow} └─────────────────────────────────────────────────────┘${NC}"
-echo -e " ${BIYellow}┌─────────────────────────────────────┐${NC}"
-echo -e " ${BIYellow}│  Version      ${NC} : ${BIPurple} Ver4. Last Update${NC}"
-echo -e " ${BIYellow}│  User       ${NC}   : ${BIWhite} $Name${NC}"
-echo -e " ${BIYellow}│  Expiry script${NC} : ${BIYellow} $useexp${NC}: ${BIRed}Days${NC}"
-echo -e " ${BIYellow}└─────────────────────────────────────┘${NC}"
+echo -e " ┌─────────────────────────────────────┐" | lolcat
+echo -e " │  Version      ${NC} : ${BIPurple} Ver4. Last Update" | lolcat
+echo -e " │  User       ${NC}   : ${BIWhite} $Name" | lolcat
+echo -e " │  Expiry script${NC} : ${BIYellow} $useexp${NC}: ${BIRed}Days" | lolcat
+echo -e " └─────────────────────────────────────┘" | lolcat
 echo
 read -p " Select menu : " opt
 echo -e ""
