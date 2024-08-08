@@ -82,7 +82,7 @@ fi
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[40;1;37m       • MENU VLESS •         \E[0m"
+echo -e "\E[40;1;37m       • MENU VLESS •              \E[0m"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e ""
 echo -e " [\e[36m•1\e[0m] Buat Vless "
