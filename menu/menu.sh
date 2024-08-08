@@ -246,7 +246,7 @@ echo -e "${BIYellow} └──────────────────�
 echo -e " ${BIYellow}┌─────────────────────────────────────┐${NC}"
 echo -e " ${BIYellow}│  Version      ${NC} : ${BIPurple} Ver4. Last Update${NC}"
 echo -e " ${BIYellow}│  User       ${NC}   : ${BIWhite} $Name${NC}"
-echo -e " ${BIYellow}│  Expiry script${NC} : ${BIYellow}$useexp${NC}: ${BIRed}Days${NC}"
+echo -e " ${BIYellow}│  Expiry script${NC} : ${BIYellow} $useexp${NC}: ${BIRed}Days${NC}"
 echo -e " ${BIYellow}└─────────────────────────────────────┘${NC}"
 echo
 read -p " Select menu : " opt
