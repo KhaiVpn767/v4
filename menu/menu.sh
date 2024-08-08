@@ -229,12 +229,12 @@ echo -e "   ${BIPurple}     STUNNEL ${NC}: $resst" "${BIPurple} DROPBEAR ${NC}: 
 echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
 echo -e "${BIYellow} │                      OTHER MENU                     │ "
 echo -e "${BIYellow} │=====================================================│" | lolcat
-echo -e "${BIYellow} │${NC}${BIPurple} [•1]${NC}📨 ${BIWhite} SSH${NC}             " "${BIPurple}[•7]${NC}📨 ${BIWhite} CHECK RUNNING${NC}" | lolcat
+echo -e "${BIYellow} │${NC}${BIPurple} [•1]${NC}📨 ${BIWhite} SSH${NC}             " "${BIPurple}[•7]${NC}📨 ${BIWhite} CHECK RUNNING${NC}"
 echo -e "${BIYellow} │${NC}${BIPurple} [•2]${NC}📨 ${BIWhite} VMESS${NC}           " "${BIPurple}[•8]${NC}📨 ${BIWhite} RESTR SERVICE${NC}" | lolcat           
-echo -e "${BIYellow} │${NC}${BIPurple} [•3]${NC}📨 ${BIWhite} VLESS${NC}           " "${BIPurple}[•9]${NC}📨 ${BIWhite} BACKUP MENU${NC}  " | lolcat                   
+echo -e "${BIYellow} │${NC}${BIPurple} [•3]${NC}📨 ${BIWhite} VLESS${NC}           " "${BIPurple}[•9]${NC}📨 ${BIWhite} BACKUP MENU${NC}  "             
 echo -e "${BIYellow} │${NC}${BIPurple} [•4]${NC}📨 ${BIWhite} TROJAN-GO${NC}       " "${BIPurple}[10]${NC}📨 ${BIWhite} CLEAR Ram${NC} " | lolcat                 
-echo -e "${BIYellow} │${NC}${BIPurple} [•5]${NC}📨 ${BIWhite} TROJAN-WS${NC}       " "${BIPurple}[11]${NC}📨 ${BIWhite} UPDATE${NC} " | lolcat 
-echo -e "${BIYellow} │${NC}${BIPurple} [•6]${NC}📨 ${BIWhite} MENU SETINGS${NC}    " "${BIPurple}[12]${NC}📨 ${BIWhite} check port${NC} " | lolcat   
+echo -e "${BIYellow} │${NC}${BIPurple} [•5]${NC}📨 ${BIWhite} TROJAN-WS${NC}       " "${BIPurple}[11]${NC}📨 ${BIWhite} UPDATE${NC} "
+echo -e "${BIYellow} │${NC}${BIPurple} [•6]${NC}📨 ${BIWhite} MENU SETINGS${NC}    " "${BIPurple}[12]${NC}📨 ${BIWhite} check port${NC} " | lolcat
 echo -e "${BIYellow} └──────────────────────────────────────────────────────┘" | lolcat 
 echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
 echo -e "${BIYellow} │  \033[0m ${BOLD}${GREEN}XXX${BIYellow} SSH${GREEN}  XXX  ${BIYellow}VMESS  ${GREEN}XXX  ${BIYellow}VLESS  ${GREEN}XXX  ${BIYellow}TROJAN${GREEN} XXX " | lolcat
