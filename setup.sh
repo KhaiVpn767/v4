@@ -58,8 +58,6 @@ if [ "" = "$PKG_OK" ]; then
   sleep 1
   echo ""
   sleep 1
-  echo -e "[ ${tyblue}NOTES${NC} ] If error you need.. to do this"
-  read
 else
   echo -e "[ ${green}INFO${NC} ] Oke installed"
 fi
