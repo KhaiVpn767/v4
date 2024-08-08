@@ -58,6 +58,19 @@ if [ "" = "$PKG_OK" ]; then
   sleep 1
   echo ""
   sleep 1
+  echo -e "[ ${tyblue}NOTES${NC} ] If error you need.. to do this"
+  sleep 1
+  echo ""
+  sleep 1
+  echo -e "[ ${green}NOTES${NC} ] 1. apt update -y"  
+  echo -e "[ ${green}NOTES${NC} ] 2. apt upgrade -y"
+  echo -e "[ ${green}NOTES${NC} ] 3. apt dist-upgrade -y"
+  echo -e "[ ${green}NOTES${NC} ] 4. reboot"
+  sleep 1
+  echo -e "[ ${green}NOTES${NC} ] After rebooting"
+  echo -e "[ ${green}NOTES${NC} ] Then run this script again"
+  echo -e "[ ${green}NOTES${NC} ] if you understand then tap enter now"
+  read
 else
   echo -e "[ ${green}INFO${NC} ] Oke installed"
 fi
