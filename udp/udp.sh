@@ -1,6 +1,6 @@
 #!/bin/bash
 #Script UdpCustom 2023
-#Script By IMMANVPN
+#Script By KhaiVPN
 
 cd
 rm -rf /root/udp
@@ -11,7 +11,7 @@ sleep 4
 echo " install UDP-CUSTOM........" | lolcat
 sleep 4
 clear
-echo "OTW BARENG IMMANVPN........" | lolcat
+echo "OTW BARENG KhaiVPN........" | lolcat
 clear
 wget -q --show-progress --load-cookies /tmp/cookies.txt "https://gitlab.com/Exe302/Tunnel/-/raw/main/udp-custom-linux-amd64" -O /root/udp/udp-custom && rm -rf /tmp/cookies.txt
 chmod +x /root/udp/udp-custom
