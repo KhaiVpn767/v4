@@ -9,6 +9,7 @@ rm -rf menu
 rm -rf menu-vmess
 rm -rf menu-vless
 rm -rf running
+rm -rf about
 rm -rf menu-trgo
 rm -rf menu-trojan
 rm -rf menu-sshh
@@ -55,6 +56,7 @@ wget -O up "https://raw.githubusercontent.com/KhaiVpn767/v4/main/up.sh"
 wget -O menu "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu.sh"
 wget -O menu-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-vless.sh"
 wget -O running "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/running.sh"
+wget -O about "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/about.sh"
 wget -O menu-trgo "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-trgo.sh"
 wget -O menu-trojan "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-trojan.sh"
 
@@ -110,6 +112,7 @@ chmod +x menu-trial
 chmod +x menu-vmess
 chmod +x menu-vless
 chmod +x running
+chmod +x about
 chmod +x clearcache
 chmod +x menu-trgo
 chmod +x menu-trojan
