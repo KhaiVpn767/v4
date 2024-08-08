@@ -4,7 +4,7 @@ echo "Checking VPS"
 aureb=$(cat /home/re_otm)
 clear
 echo " "
-echo "===============-[ IMMANVPN COMMUNITY ]-=============="
+echo "===============-[ khaiVPN COMMUNITY ]-=============="
 echo ""
 echo "------------------------------------------------------------"
 echo ""
@@ -26,7 +26,7 @@ echo "   - Trojan WS		: 443" | tee -a log-install.txt
 echo "   - Trojan Go		: 443" | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
-echo "   - Timezone		: Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
+echo "   - Timezone		: Asia/Kuala_Lumpur (GMT +8)"  | tee -a log-install.txt
 echo "   - Fail2Ban		: [ON]"  | tee -a log-install.txt
 echo "   - Dflate		: [ON]"  | tee -a log-install.txt
 echo "   - IPtables		: [ON]"  | tee -a log-install.txt
@@ -44,7 +44,7 @@ echo ""
 echo ""
 echo "------------------------------------------------------------"
 echo ""
-echo "==========-[ Script Created By IMMANVPN ]-==========="
+echo "==========-[ Script Created By khaiVPN ]-==========="
 echo -e ""
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
