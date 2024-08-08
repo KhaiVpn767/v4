@@ -1,5 +1,5 @@
 #!/bin/bash
-#Script By IMMANVPN
+#Script By KhaiVPN
 clear
 echo -e ""
 echo -e "Download all cert v2ray......" | lolcat
