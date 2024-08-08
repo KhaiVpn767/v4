@@ -110,7 +110,9 @@ cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
 cpu_usage="$((${cpu_usage1/\.*} / ${corediilik:-1}))"
 cpu_usage+=" %"
 
-# // Clear
+# TIME ZON
+WKT=$(curl -s ipinfo.io/timezone )
+
 clear
 clear && clear && clear
 clear;clear;clear
