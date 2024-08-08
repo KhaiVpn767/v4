@@ -238,7 +238,7 @@ echo -e "${BIYellow} │${NC}${BIPurple} [•6]${NC}📨 ${BIWhite} MENU SETINGS
 echo -e "${BIYellow} └──────────────────────────────────────────────────────┘" | lolcat 
 echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
 echo -e "${BIYellow} │  \033[0m ${BOLD}${GREEN}XXX${BIYellow} SSH${GREEN}  XXX  ${BIYellow}VMESS  ${GREEN}XXX  ${BIYellow}VLESS  ${GREEN}XXX  ${BIYellow}TROJAN${GREEN} XXX " | lolcat
-echo -e "${BIYellow} │  \033[0m ${Blue}     $ssh1          $vma           $vla            $tra              " | lolcat
+echo -e "${BIYellow} │  \033[0m ${Blue}     $ssh1          $vma           $vla            $tra              "
 echo -e "${BIYellow} └─────────────────────────────────────────────────────┘" | lolcat
 echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
 echo -e "${BIYellow} │$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
