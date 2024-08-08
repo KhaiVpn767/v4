@@ -234,7 +234,7 @@ echo -e "${BIYellow} │${NC}${BICyan} [•2]${NC}📨 ${white} VMESS${NC}      
 echo -e "${BIYellow} │${NC}${BICyan} [•3]${NC}📨 ${white} VLESS${NC}        " "${BICyan}[•9]${NC}📨 ${white} BACKUP MENU${NC}  "                   
 echo -e "${BIYellow} │${NC}${BICyan} [•4]${NC}📨 ${white} TROJAN-GO${NC}    " "${BICyan}[10]${NC}📨 ${white} INSTALL BOT VPS${NC} "                 
 echo -e "${BIYellow} │${NC}${BICyan} [•5]${NC}📨 ${white} TROJAN-WS${NC}    " "${BICyan}[11]${NC}📨 ${white} MENU SETINGS${NC} " 
-echo -e "${BIYellow} │${NC}${BICyan} [•6]${NC}📨 ${white} Update Menu${NC}  " "${BICyan}[12]${NC}📨 ${white} SETTING BOT${NC} "   
+echo -e "${BIYellow} │${NC}${BICyan} [•6]${NC}📨 ${white} Update Menu${NC}  " "${BICyan}[12]${NC}📨 ${white} check port${NC} "   
 echo -e "${BIYellow} └──────────────────────────────────────────────────────┘${NC}" 
 echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐${NC}"
 echo -e "${BIYellow} │  \033[0m ${BOLD}${GREEN}XXX${BIYellow} SSH${GREEN}  XXX  ${BIYellow}VMESS  ${GREEN}XXX  ${BIYellow}VLESS  ${GREEN}XXX  ${BIYellow}TROJAN${GREEN} XXX $NC "
@@ -263,7 +263,7 @@ case $opt in
 9) clear ; menu-backup ;;
 10) clear ; wget https://raw.githubusercontent.com/KhaiVpn767/v4/main/install-bot.sh && chmod +x install-bot.sh && ./install-bot.sh ;;
 11) clear ; menu-set ;;
-12) clear ; bot ;;
+12) clear ; about.sh ;;
 00) clear ; menu ;;
 x) exit ;;
 *) echo -e "" ; echo "Press any key to back exit" ; sleep 1 ; exit ;;
