@@ -223,7 +223,7 @@ echo -e "${BIYellow} |  ${BIWhite}CPU Usage       :  $cpu_usage" | lolcat
 echo -e " ${BIYellow}│  ${BIWhite}Current Domain  :  ${BIWhite}$(cat /etc/xray/domain)" | lolcat
 echo -e " ${BIYellow}│  ${BIWhite}NS Domain       :  ${BIYellow}$(cat /root/nsdomain)" | lolcat
 echo -e " ${BIYellow}│  ${BIWhite}IP-VPS          :  ${BIRed}$IPVPS$" | lolcat
-echo -e " ${BIYellow}└─────────────────────────────────────────────────────┘ | lolcat"
+echo -e " ${BIYellow}└─────────────────────────────────────────────────────┘" | lolcat
 echo -e "     ${BIPurple} SSH ${NC}: $ressh"" ${BIPurple} NGINX ${NC}: $resngx"" ${BIPurple}  XRAY ${NC}: $resv2r"" ${BIPurple} TROJAN ${NC}: $resv2r" | lolcat
 echo -e "   ${BIPurple}     STUNNEL ${NC}: $resst" "${BIPurple} DROPBEAR ${NC}: $resdbr" "${BIPurple} SSH-WS ${NC}: $ressshws" | lolcat
 echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
