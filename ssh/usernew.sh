@@ -87,7 +87,7 @@ TEXT="
 <code>GET / HTTP/1.1[crlf]Host: [host][crlf]Connection: Upgrade[crlf]User-Agent: [ua][crlf]Upgrade: ws[crlf][crlf]</code>
 <code>◇═══════════════════◇</code>
 <code>Expired On   : $exp</code>
-📡@ownerimmanvpn
+📡@owner-khaiVPN
 "
 
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
@@ -138,7 +138,7 @@ GET / HTTP/1.1[crlf]Host:
 $domen[crlf]Upgrade: ws[crlf][crlf]
 " | tee -a /etc/log-create-user.log
 echo -e "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━" | tee -a /etc/log-create-user.log
-echo -e "                  ${cyan}IMMANVPN-FAMILY${NC}"
+echo -e "                  ${cyan}khaiVPN${NC}"
 echo -e "enter back to menu  "
 else 
 
@@ -183,5 +183,5 @@ $domen[crlf][crlf]
 echo -e "${kuning}━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━${NC}" | tee -a /etc/log-create-user.log
 fi
 echo "" | tee -a /etc/log-create-user.log
-read -n 1 -s -r -p "Script By IMMANVPN"
+read -n 1 -s -r -p "Script By khaiVPN"
 menu
