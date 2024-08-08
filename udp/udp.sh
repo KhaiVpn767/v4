@@ -27,7 +27,7 @@ chmod 644 /root/udp/config.json
 if [ -z "$1" ]; then
 cat <<EOF > /etc/systemd/system/udp-custom.service
 [Unit]
-Description=UDP Custom by IMMANVPN
+Description=UDP Custom by KhaiVPN
 
 [Service]
 User=root
@@ -43,7 +43,7 @@ EOF
 else
 cat <<EOF > /etc/systemd/system/udp-custom.service
 [Unit]
-Description=UDP Custom by IMMANVPN
+Description=UDP Custom by KhaiVPN
 
 [Service]
 User=root
