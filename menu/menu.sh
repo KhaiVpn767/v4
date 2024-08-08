@@ -213,40 +213,40 @@ IPVPS=$(curl -s ipinfo.io/ip )
 clear
 echo -e ""
 echo -e ""
-echo -e "                 ${BIPurple}Premium Script : ${BIPurple}khaiVPN${NC}"
-echo -e "              ${BIPurple} SCRIPT MULTI V4.0 STABILE ${NC}"
-echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${BIYellow} │                  ${BIWhite}${UWhite}Informations${NC}"
-echo -e "${BIYellow} │====================================================="
-echo -e " ${BIYellow}│  ${BIWhite}Use Core        :  ${BIWhite}XRAY${NC}"
-echo -e "${BIYellow} |  ${BIWhite}CPU Usage       :  $cpu_usage"
-echo -e " ${BIYellow}│  ${BIWhite}Current Domain  :  ${BIWhite}$(cat /etc/xray/domain)${NC}"
-echo -e " ${BIYellow}│  ${BIWhite}NS Domain       :  ${BIYellow}$(cat /root/nsdomain)${NC}"
-echo -e " ${BIYellow}│  ${BIWhite}IP-VPS          :  ${BIRed}$IPVPS${NC}"
-echo -e " ${BIYellow}└─────────────────────────────────────────────────────┘${NC}"
-echo -e "     ${BIPurple} SSH ${NC}: $ressh"" ${BIPurple} NGINX ${NC}: $resngx"" ${BIPurple}  XRAY ${NC}: $resv2r"" ${BIPurple} TROJAN ${NC}: $resv2r"
-echo -e "   ${BIPurple}     STUNNEL ${NC}: $resst" "${BIPurple} DROPBEAR ${NC}: $resdbr" "${BIPurple} SSH-WS ${NC}: $ressshws"
-echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${BIYellow} │                      OTHER MENU                     │ ${NC}" 
-echo -e "${BIYellow} │=====================================================│"
-echo -e "${BIYellow} │${NC}${BIPurple} [•1]${NC}📨 ${BIWhite} SSH${NC}             " "${BIPurple}[•7]${NC}📨 ${BIWhite} CHECK RUNNING${NC}"
-echo -e "${BIYellow} │${NC}${BIPurple} [•2]${NC}📨 ${BIWhite} VMESS${NC}           " "${BIPurple}[•8]${NC}📨 ${BIWhite} RESTR SERVICE${NC}"           
-echo -e "${BIYellow} │${NC}${BIPurple} [•3]${NC}📨 ${BIWhite} VLESS${NC}           " "${BIPurple}[•9]${NC}📨 ${BIWhite} BACKUP MENU${NC}  "                   
-echo -e "${BIYellow} │${NC}${BIPurple} [•4]${NC}📨 ${BIWhite} TROJAN-GO${NC}       " "${BIPurple}[10]${NC}📨 ${BIWhite} CLEAR Ram${NC} "                 
-echo -e "${BIYellow} │${NC}${BIPurple} [•5]${NC}📨 ${BIWhite} TROJAN-WS${NC}       " "${BIPurple}[11]${NC}📨 ${BIWhite} UPDATE${NC} " 
-echo -e "${BIYellow} │${NC}${BIPurple} [•6]${NC}📨 ${BIWhite} MENU SETINGS${NC}    " "${BIPurple}[12]${NC}📨 ${BIWhite} check port${NC} "   
-echo -e "${BIYellow} └──────────────────────────────────────────────────────┘${NC}" 
-echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐${NC}"
-echo -e "${BIYellow} │  \033[0m ${BOLD}${GREEN}XXX${BIYellow} SSH${GREEN}  XXX  ${BIYellow}VMESS  ${GREEN}XXX  ${BIYellow}VLESS  ${GREEN}XXX  ${BIYellow}TROJAN${GREEN} XXX $NC "
-echo -e "${BIYellow} │  \033[0m ${Blue}     $ssh1          $vma           $vla            $tra              $NC"
-echo -e "${BIYellow} └─────────────────────────────────────────────────────┘${NC}"
-echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐${NC}"
+echo -e "                 ${BIPurple}Premium Script : ${BIPurple}khaiVPN" | lolcat
+echo -e "              ${BIPurple} SCRIPT MULTI V4.0 STABILE " | lolcat
+echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
+echo -e "${BIYellow} │                  ${BIWhite}${UWhite}Informations" | lolcat
+echo -e "${BIYellow} │=====================================================" | lolcat
+echo -e " ${BIYellow}│  ${BIWhite}Use Core        :  ${BIWhite}XRAY" | lolcat
+echo -e "${BIYellow} |  ${BIWhite}CPU Usage       :  $cpu_usage" | lolcat
+echo -e " ${BIYellow}│  ${BIWhite}Current Domain  :  ${BIWhite}$(cat /etc/xray/domain)" | lolcat
+echo -e " ${BIYellow}│  ${BIWhite}NS Domain       :  ${BIYellow}$(cat /root/nsdomain)" | lolcat
+echo -e " ${BIYellow}│  ${BIWhite}IP-VPS          :  ${BIRed}$IPVPS$" | lolcat
+echo -e " ${BIYellow}└─────────────────────────────────────────────────────┘" | lolcat"
+echo -e "     ${BIPurple} SSH ${NC}: $ressh"" ${BIPurple} NGINX ${NC}: $resngx"" ${BIPurple}  XRAY ${NC}: $resv2r"" ${BIPurple} TROJAN ${NC}: $resv2r" | lolcat
+echo -e "   ${BIPurple}     STUNNEL ${NC}: $resst" "${BIPurple} DROPBEAR ${NC}: $resdbr" "${BIPurple} SSH-WS ${NC}: $ressshws" | lolcat
+echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
+echo -e "${BIYellow} │                      OTHER MENU                     │ " | lolcat 
+echo -e "${BIYellow} │=====================================================│" | lolcat
+echo -e "${BIYellow} │${NC}${BIPurple} [•1]${NC}📨 ${BIWhite} SSH${NC}             " "${BIPurple}[•7]${NC}📨 ${BIWhite} CHECK RUNNING${NC}" | lolcat
+echo -e "${BIYellow} │${NC}${BIPurple} [•2]${NC}📨 ${BIWhite} VMESS${NC}           " "${BIPurple}[•8]${NC}📨 ${BIWhite} RESTR SERVICE${NC}" | lolcat           
+echo -e "${BIYellow} │${NC}${BIPurple} [•3]${NC}📨 ${BIWhite} VLESS${NC}           " "${BIPurple}[•9]${NC}📨 ${BIWhite} BACKUP MENU${NC}  " | lolcat                   
+echo -e "${BIYellow} │${NC}${BIPurple} [•4]${NC}📨 ${BIWhite} TROJAN-GO${NC}       " "${BIPurple}[10]${NC}📨 ${BIWhite} CLEAR Ram${NC} " | lolcat                 
+echo -e "${BIYellow} │${NC}${BIPurple} [•5]${NC}📨 ${BIWhite} TROJAN-WS${NC}       " "${BIPurple}[11]${NC}📨 ${BIWhite} UPDATE${NC} " | lolcat 
+echo -e "${BIYellow} │${NC}${BIPurple} [•6]${NC}📨 ${BIWhite} MENU SETINGS${NC}    " "${BIPurple}[12]${NC}📨 ${BIWhite} check port${NC} " | lolcat   
+echo -e "${BIYellow} └──────────────────────────────────────────────────────┘" | lolcat 
+echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
+echo -e "${BIYellow} │  \033[0m ${BOLD}${GREEN}XXX${BIYellow} SSH${GREEN}  XXX  ${BIYellow}VMESS  ${GREEN}XXX  ${BIYellow}VLESS  ${GREEN}XXX  ${BIYellow}TROJAN${GREEN} XXX " | lolcat
+echo -e "${BIYellow} │  \033[0m ${Blue}     $ssh1          $vma           $vla            $tra              " | lolcat
+echo -e "${BIYellow} └─────────────────────────────────────────────────────┘" | lolcat
+echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
 echo -e "${BIYellow} │$NC ${BICyan}HARI ini${NC}: ${red}$ttoday$NC ${BICyan}KEMARIN${NC}: ${red}$tyest$NC ${BICyan}BULAN${NC}: ${red}$tmon$NC $NC"
-echo -e "${BIYellow} └─────────────────────────────────────────────────────┘${NC}"
+echo -e "${BIYellow} └─────────────────────────────────────────────────────┘" | lolcat
 echo -e " ┌─────────────────────────────────────┐" | lolcat
 echo -e " │  Version      ${NC} : ${BIPurple} Ver4. Last Update" | lolcat
 echo -e " │  User       ${NC}   : ${BIWhite} $Name" | lolcat
-echo -e " │  Expiry script${NC} : ${BIYellow} $useexp${NC}: ${BIRed}Days" | lolcat
+echo -e " │  Expiry script${NC} : ${BIYellow} $useexp" | lolcat
 echo -e " └─────────────────────────────────────┘" | lolcat
 echo
 read -p " Select menu : " opt
