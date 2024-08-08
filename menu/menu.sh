@@ -216,7 +216,7 @@ echo -e ""
 echo -e "                 ${BIPurple}Premium Script : ${BIPurple}khaiVPN" | lolcat
 echo -e "              ${BIPurple} SCRIPT MULTI V4.0 STABILE " | lolcat
 echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
-echo -e "${BIYellow} │                     Informations                   |" | lolcat
+echo -e "${BIYellow} │                     Informations                    |"
 echo -e "${BIYellow} │=====================================================" | lolcat
 echo -e " ${BIYellow}│  ${BIWhite}Use Core        :  ${BIWhite}XRAY" | lolcat
 echo -e "${BIYellow} |  ${BIWhite}CPU Usage       :  $cpu_usage" | lolcat
@@ -227,7 +227,7 @@ echo -e " ${BIYellow}└──────────────────�
 echo -e "     ${BIPurple} SSH ${NC}: $ressh"" ${BIPurple} NGINX ${NC}: $resngx"" ${BIPurple}  XRAY ${NC}: $resv2r"" ${BIPurple} TROJAN ${NC}: $resv2r" | lolcat
 echo -e "   ${BIPurple}     STUNNEL ${NC}: $resst" "${BIPurple} DROPBEAR ${NC}: $resdbr" "${BIPurple} SSH-WS ${NC}: $ressshws" | lolcat
 echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
-echo -e "${BIYellow} │                      OTHER MENU                     │ " | lolcat 
+echo -e "${BIYellow} │                      OTHER MENU                     │ "
 echo -e "${BIYellow} │=====================================================│" | lolcat
 echo -e "${BIYellow} │${NC}${BIPurple} [•1]${NC}📨 ${BIWhite} SSH${NC}             " "${BIPurple}[•7]${NC}📨 ${BIWhite} CHECK RUNNING${NC}" | lolcat
 echo -e "${BIYellow} │${NC}${BIPurple} [•2]${NC}📨 ${BIWhite} VMESS${NC}           " "${BIPurple}[•8]${NC}📨 ${BIWhite} RESTR SERVICE${NC}" | lolcat           
