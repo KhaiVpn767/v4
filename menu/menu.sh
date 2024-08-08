@@ -220,6 +220,7 @@ echo -e "              ${BIPurple} SCRIPT MULTI V4.0 STABILE " | lolcat
 echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
 echo -e "${BIYellow} │                     Informations                    |"
 echo -e "${BIYellow} │=====================================================|" | lolcat
+echo -e "${BIYellow} |  ${BIWhite}Time Zone       :  $WKT" | lolcat
 echo -e " ${BIYellow}│  ${BIWhite}Use Core        :  ${BIWhite}XRAY" | lolcat
 echo -e "${BIYellow} |  ${BIWhite}CPU Usage       :  $cpu_usage" | lolcat
 echo -e " ${BIYellow}│  ${BIWhite}Current Domain  :  ${BIWhite}$(cat /etc/xray/domain)" | lolcat
