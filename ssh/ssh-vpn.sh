@@ -276,6 +276,7 @@ wget -O menu-trial "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/me
 wget -O menu-vmess "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-vmess.sh"
 wget -O menu-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-vless.sh"
 wget -O running "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/running.sh"
+wget -O about "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/about.sh"
 wget -O clearcache "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/clearcache.sh"
 wget -O menu-trgo "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-trgo.sh"
 wget -O menu-trojan "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-trojan.sh"
@@ -332,6 +333,7 @@ chmod +x menu-trial
 chmod +x menu-vmess
 chmod +x menu-vless
 chmod +x running
+chmod +x about
 chmod +x clearcache
 chmod +x menu-trgo
 chmod +x menu-trojan
