@@ -119,13 +119,13 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 else
 
 echo -e "${cyan}══════════════════════${NC}" | tee -a /etc/log-create-user.log
-echo -e "\E[40;1;37m        𝗔𝗖𝗖𝗢𝗨𝗡𝗧        \E[0m" | tee -a /etc/log-create-user.log
+echo -e "\E[40;1;37m        𝗔𝗖𝗖𝗢𝗨𝗡𝗧    \E[0m" | tee -a /etc/log-create-user.log
 echo -e "${cyan}══════════════════════${NC}" | tee -a /etc/log-create-user.log
 echo -e "Username    : $Login" | tee -a /etc/log-create-user.log
 echo -e "Password    : $Pass" | tee -a /etc/log-create-user.log
 echo -e "Expired On  : $exp" | tee -a /etc/log-create-user.log
 echo -e "${cyan}══════════════════════${NC}" | tee -a /etc/log-create-user.log
-echo -e "\E[40;1;37m         𝗦𝗘𝗥𝗩𝗘𝗥         \E[0m" | tee -a /etc/log-create-user.log
+echo -e "\E[40;1;37m         𝗦𝗘𝗥𝗩𝗘𝗥     \E[0m" | tee -a /etc/log-create-user.log
 echo -e "${cyan}══════════════════════${NC}" | tee -a /etc/log-create-user.log
 echo -e "Host        : $domen" | tee -a /etc/log-create-user.log
 echo -e "Nameserver  : $sldomain" | tee -a /etc/log-create-user.log
