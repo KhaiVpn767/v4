@@ -33,7 +33,7 @@ export Server_URL="autosc.me/aio"
 export Server_Port="443"
 export Server_IP="underfined"
 export Script_Mode="Stable"
-export Auther="IMMANVPN"
+export Auther="khaiVPN"
 export RED_BG='\e[41m'
 
 # // Exporting IP Address
@@ -126,8 +126,8 @@ clear;clear;clear
 
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo -e "                ${YELLOW}(${NC}${GREEN} STATUS SERVICE INFORMATION ${NC}${YELLOW})${NC}"
-echo -e "                  CREATOR : ${GREEN} IMMAN ${NC}${YELLOW}${NC} ${GREEN}VPN ${NC}${YELLOW}${NC}"
-echo -e "       © Copyright By IMMANVPN ${YELLOW}(${NC} TUNEL ${YELLOW})${NC}"
+echo -e "                  CREATOR : ${GREEN} khai ${NC}${YELLOW}${NC} ${GREEN}VPN ${NC}${YELLOW}${NC}"
+echo -e "       © Copyright By khaiVPN ${YELLOW}(${NC} TUNEL ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
 echo -e "${RED_BG}                     Sytem Information                    ${NC}"
