@@ -59,6 +59,11 @@ clear
 vless1="$(echo $vlesslink1 | base64 -w 0)"
 vless2="$(echo $vlesslink2 | base64 -w 0)"
 vless3="$(echo $vlesslink3 | base64 -w 0)"
+vless4="$(echo $vlesslink4 | base64 -w 0)"
+vless5="$(echo $vlesslink5 | base64 -w 0)"
+vless6="$(echo $vlesslink6 | base64 -w 0)"
+vless7="$(echo $vlesslink7 | base64 -w 0)"
+vless8="$(echo $vlesslink8 | base64 -w 0)"
 
 TEXT="
 <code>◇═══════════════════◇</code>
