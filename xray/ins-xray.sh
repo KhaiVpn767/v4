@@ -451,8 +451,8 @@ END
 # Installing Trojan Go Service
 cat > /etc/systemd/system/trojan-go.service << END
 [Unit]
-Description=Trojan-Go Service Mod By IMMANVPN
-Documentation=github.com/IMMANVPN/vipies
+Description=Trojan-Go Service Mod By khaiVPN
+Documentation=github.com/khaiVPN/vipies
 After=network.target nss-lookup.target
 
 [Service]
