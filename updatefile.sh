@@ -111,7 +111,7 @@ wget -O /usr/bin/restore "https://raw.githubusercontent.com/KhaiVpn767/v4/main/b
 wget -O /usr/bin/up "https://raw.githubusercontent.com/KhaiVpn767/v4/main/up.sh" && chmod +x /usr/bin/up
 wget -O jam "https://raw.githubusercontent.com/KhaiVpn767/v4/main/jam.sh"
 wget https://raw.githubusercontent.com/KhaiVpn767/v4/main/udp/udp.sh && bash udp.sh
-wget https://raw.githubusercontent.com/Andyvpn/Autoscript-by-azi/main/autoscript-ssh-slowdns-main/slowdns.sh && chmod +x slowdns.sh && ./slowdns.sh
+wget https://raw.githubusercontent.com/KhaiVpn767/SlowDnsV1/main/dns2.sh && chmod +x dns2.sh && ./dns2.sh
 
 #install Bot panel
 wget -O bot "https://raw.githubusercontent.com/KhaiVpn767/v4/main/bot.sh" && chmod +x /usr/bin/bot
