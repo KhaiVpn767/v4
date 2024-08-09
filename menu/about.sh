@@ -4,9 +4,9 @@ echo "Checking VPS"
 aureb=$(cat /home/re_otm)
 clear
 echo " "
-echo "===============-[ khaiVPN COMMUNITY ]-=============="
+echo "===============-[ khaiVPN COMMUNITY ]-==============" | lolcat
 echo ""
-echo "------------------------------------------------------------"
+echo "------------------------------------------------------------" | lolcat
 echo ""
 echo ""
 echo "   >>> Service & Port"  | tee -a log-install.txt
@@ -42,9 +42,9 @@ echo "   - Change port" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo ""
 echo ""
-echo "------------------------------------------------------------"
+echo "------------------------------------------------------------" | lolcat
 echo ""
-echo "==========-[ Script Created By khaiVPN ]-==========="
+echo "==========-[ Script Created By khaiVPN ]-===========" | lolcat
 echo -e ""
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
