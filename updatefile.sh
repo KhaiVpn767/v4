@@ -57,7 +57,6 @@ rm -rf add-vless
 cd /usr/bin
 # menu
 wget -O menu "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu.sh"
-wget -O menu-trial "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/trialvless.sh"
 wget -O menu-vmess "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-vmess.sh"
 wget -O menu-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-vless.sh"
 wget -O running "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/running.sh"
