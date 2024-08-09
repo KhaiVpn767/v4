@@ -24,6 +24,7 @@ echo "2).Restore"
 echo "3).strt"
 echo "4).limit speed"
 echo "5).autobackup"
+echo "0).menu"
 echo
 echo -e "${ungu}++++++++++++++++++++++++++++++++++++++++++++"
 echo
@@ -36,7 +37,7 @@ figlet "backup"
 backup
 echo "--------------------------------------------------------"
 echo
-echo "${Green}Terima Kasih sudah menggunakan layanan Premium IMMANVPN"
+echo "${Green}Terima Kasih sudah menggunakan layanan Premium khaiVPN"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -47,7 +48,7 @@ figlet "Restore" | lolcat
 restore
 echo "--------------------------------------------------------"
 echo
-echo "${Green}Terima Kasih sudah menggunakan layanan Premium IMMANVPN"
+echo "${Green}Terima Kasih sudah menggunakan layanan Premium khaiVPN"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -57,7 +58,7 @@ figlet "strt"
 strt
 echo "--------------------------------------------------------"
 echo
-echo "${Green}Terimakasih sudah menggunakan layanan Premium IMMANVPN"
+echo "${Green}Terimakasih sudah menggunakan layanan Premium khaiVPN"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -66,7 +67,7 @@ then
 limitspeed
 echo "--------------------------------------------------------"
 echo
-echo "${Green}Terimakasih sudah menggunakan layanan Premium IMMANVPN"
+echo "${Green}Terimakasih sudah menggunakan layanan Premium khaiVPN"
 echo
 echo "--------------------------------------------------------"
 fi
@@ -76,7 +77,7 @@ then
 autobackup
 echo "--------------------------------------------------------"
 echo
-echo "${Green}Terimakasih sudah menggunakan layanan Premium IMMANVPN"
+echo "${Green}Terimakasih sudah menggunakan layanan Premium khaiVPN"
 echo
 echo "--------------------------------------------------------"
 fi
