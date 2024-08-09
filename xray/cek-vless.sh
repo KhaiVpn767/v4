@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/ownerimmanvpn
+# My Telegram : https://t.me/owner-khaivpn
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -52,5 +52,5 @@ oth=$(cat /tmp/other.txt | sort | uniq | nl)
 echo "other";
 echo "$oth";
 echo "----------------------------------------"
-echo "Script Mod By IMMANVPN"
+echo "Script Mod By khaiVPN"
 rm -rf /tmp/other.txt
