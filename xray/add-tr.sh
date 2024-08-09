@@ -76,7 +76,7 @@ TEXT="
 <code>${trojan1}</code>
 <code>◇═══════════════════◇</code>
 <code>Expired On : $exp</code>
-📡@TazVPN
+📡@orner-khaiVPN
 "
 
 curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
