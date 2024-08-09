@@ -86,6 +86,7 @@ wget -O speedtest "https://raw.githubusercontent.com/KhaiVpn767/v4/main/ssh/spee
 wget -O auto-reboot "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/auto-reboot.sh"
 wget -O restarts "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/restarts.sh"
 wget -O bw "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/bw.sh"
+wget -O add-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/add-vless.sh"
 
 # change port
 wget -O port-ssl "https://raw.githubusercontent.com/KhaiVpn767/v4/main/port/port-ssl.sh"
@@ -142,6 +143,7 @@ chmod +x about
 chmod +x auto-reboot
 chmod +x restarts
 chmod +x bw
+chmod +x add-vless
 
 chmod +x port-ssl
 chmod +x port-ovpn
