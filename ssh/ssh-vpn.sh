@@ -272,7 +272,6 @@ netfilter-persistent reload
 cd /usr/bin
 # menu
 wget -O menu "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu.sh"
-wget -O menu-trial "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/menu-trial.sh"
 wget -O menu-vmess "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-vmess.sh"
 wget -O menu-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-vless.sh"
 wget -O running "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/running.sh"
@@ -306,7 +305,7 @@ wget -O port-change "https://raw.githubusercontent.com/KhaiVpn767/v4/main/port/p
 wget -O certv2ray "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/certv2ray.sh"
 wget -O menu-webmin "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-webmin.sh"
 wget -O speedtest "https://raw.githubusercontent.com/KhaiVpn767/v4/main/ssh/speedtest_cli.py"
-wget -O about "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/about.sh"
+wget -O about "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/about.sh"
 wget -O auto-reboot "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/auto-reboot.sh"
 wget -O restarts "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/restarts.sh"
 wget -O bw "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/bw.sh"
