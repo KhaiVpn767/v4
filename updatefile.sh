@@ -49,20 +49,24 @@ rm -rf backup
 rm -rf restore
 rm -rf jam
 rm -rf up
+rm -rf trialvless
+rm -rf add-vless
 #rm -rf bot
 
 # download script
 cd /usr/bin
 # menu
-wget -O up "https://raw.githubusercontent.com/KhaiVpn767/v4/main/up.sh"
 wget -O menu "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu.sh"
 wget -O menu-trial "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/menu-trial.sh"
 wget -O menu-vmess "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-vmess.sh"
 wget -O menu-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-vless.sh"
 wget -O running "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/running.sh"
-wget -O clearcache "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/clearcache.sh"
+wget -O about "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/about.sh"
+wget -O clearcache "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/clearcache.sh"
 wget -O menu-trgo "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-trgo.sh"
 wget -O menu-trojan "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-trojan.sh"
+wget -O trialvless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/trialvless.sh"
+wget -O add-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/add-vless.sh"
 
 # menu ssh ovpn
 wget -O menu-sshh "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-sshh.sh"
@@ -120,6 +124,8 @@ chmod +x running
 chmod +x clearcache
 chmod +x menu-trgo
 chmod +x menu-trojan
+chmod +x trialvless
+chmod +x add-vless
 
 chmod +x menu-sshh
 chmod +x usernew
