@@ -16,24 +16,19 @@ sed -i '/#vless$/a\#& '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
 sed -i '/#vlessgrpc$/a\#& '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
-export vlesslink1="vless://${uuid}@${sts}${domain}:$tls?path=/vless&security=tls&encryption=none&type=ws&sni=$sni#${user}"
-export vlesslink2="vless://${uuid}@${sts}${domain}:$none?path=/vless&encryption=none&host=$sni&type=ws#${user}"
-export vlesslink3="vless://${uuid}@api.useinsider.com:$none?path=/vless&encryption=none&host=${sts}${domain}&type=ws#Server:$creditt-DIGI-APN-${user}"
-export vlesslink4="vless://${uuid}@162.159.134.61:$none?path=/vless&encryption=none&host=${sts}${domain}&type=ws#Server:$creditt-DIGI-BOSSTER-${user}"
-export vlesslink5="vless://${uuid}@${domain}:$none?path=/vless&encryption=none&host=m.pubgmobile.com&type=ws#Server:$creditt-UMOBILE-FUNZ-${user}"
-export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=/vless&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#Server:$creditt-YES-${user}"
-export vlesslink7="vless://${uuid}@104.17.148.22:$none?path=/vless&encryption=none&host=www.speedtest.net.${domain}&type=ws#Server:$creditt-SELCOM-0BASIC-${user}"
-export vlesslink8="vless://${uuid}@104.17.10.12:$none?path=/vless&encryption=none&host=cdn.who.int.${domain}&type=ws#Server:$creditt-UNIFI-${user}"
+export vlesslink1="vless://${uuid}@${sts}${domain}:443?path=/vless&security=tls&encryption=none&type=ws&sni=$sni#${user}"
+export vlesslink2="vless://${uuid}@${sts}${domain}:80?path=/vless&encryption=none&host=$sni&type=ws#${user}"
+export vlesslink3="vless://${uuid}@api.useinsider.com:80?path=/vless&encryption=none&host=${sts}${domain}&type=ws#Server:$creditt-DIGI-APN-${user}"
+export vlesslink4="vless://${uuid}@162.159.134.61:80?path=/vless&encryption=none&host=${sts}${domain}&type=ws#Server:$creditt-DIGI-BOSSTER-${user}"
+export vlesslink5="vless://${uuid}@${domain}:80?path=/vless&encryption=none&host=m.pubgmobile.com&type=ws#Server:$creditt-UMOBILE-FUNZ-${user}"
+export vlesslink6="vless://${uuid}@104.17.113.188:80?path=/vless&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#Server:$creditt-YES-${user}"
+export vlesslink7="vless://${uuid}@104.17.148.22:80?path=/vless&encryption=none&host=www.speedtest.net.${domain}&type=ws#Server:$creditt-SELCOM-0BASIC-${user}"
+export vlesslink8="vless://${uuid}@104.17.10.12:80?path=/vless&encryption=none&host=cdn.who.int.${domain}&type=ws#Server:$creditt-UNIFI-${user}"
 systemctl restart xray
 clear
 vless1="$(echo $vlesslink1 | base64 -w 0)"
 vless2="$(echo $vlesslink2 | base64 -w 0)"
 vless3="$(echo $vlesslink3 | base64 -w 0)"
-vless4="$(echo $vlesslink4 | base64 -w 0)"
-vless5="$(echo $vlesslink5 | base64 -w 0)"
-vless6="$(echo $vlesslink6 | base64 -w 0)"
-vless7="$(echo $vlesslink7 | base64 -w 0)"
-vless8="$(echo $vlesslink8 | base64 -w 0)"
 
 TEXT="
 <code>◇━━━━━━━━━━━━━━━━━◇</code>
