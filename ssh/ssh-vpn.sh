@@ -277,9 +277,11 @@ wget -O menu-vmess "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/me
 wget -O menu-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-vless.sh"
 wget -O running "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/running.sh"
 wget -O about "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/about.sh"
-wget -O clearcache "https://raw.githubusercontent.com/Fikripps/Ver3/main/menu/clearcache.sh"
+wget -O clearcache "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/clearcache.sh"
 wget -O menu-trgo "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-trgo.sh"
 wget -O menu-trojan "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-trojan.sh"
+wget -O trialvless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/trialvless.sh"
+wget -O add-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/add-vless.sh"
 
 # menu ssh ovpn
 wget -O menu-sshh "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-sshh.sh"
@@ -337,6 +339,8 @@ chmod +x about
 chmod +x clearcache
 chmod +x menu-trgo
 chmod +x menu-trojan
+chmod +x trialvless
+chmod +x add-vless
 chmod +x user-lock
 chmod +x user-unlock
 chmod +x bot
