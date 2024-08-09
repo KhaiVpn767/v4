@@ -244,7 +244,10 @@ echo -e "${BIYellow} │ \033[0m ${BOLD}${GREEN}XXX${BIYellow} SSH${GREEN}  XXX 
 echo -e "${BIYellow} │ \033[0m ${Blue}     $ssh1          $vma           $vla            $tra              "
 echo -e "${BIYellow} └─────────────────────────────────────────────────────┘" | lolcat
 echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
-echo -e "${BIYellow} │$NC ${BICyan}HARI ini${NC}: ${red}$dtoday$NC ${BICyan}KEMARIN${NC}: ${red}$dyest$NC ${BICyan}BULAN${NC}: ${red}$dmon $NC"
+echo -e "${BIYellow} | Traffic\e[0m       ${BIYellow}hari ini      kemarin        bulan   ${NC} "
+echo -e "${BIYellow} | Download\e[0m   ${BIYellow}   $dtoday    $dyest       $dmon   ${NC} "
+echo -e "${BIYellow} | Upload\e[0m     ${BIYellow}   $utoday    $uyest       $umon   ${NC} "
+echo -e "${BIYellow} | Total\e[0m       ${BIRed}  $ttoday    $tyest       $tmon  ${NC} "
 echo -e "${BIYellow} └─────────────────────────────────────────────────────┘" | lolcat
 echo -e " ┌─────────────────────────────────────┐" | lolcat
 echo -e " │ Version      ${NC} : ${BIPurple} Ver4. Last Update"
