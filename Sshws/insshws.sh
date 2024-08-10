@@ -3,7 +3,7 @@
 
 cd
 
-Install Script Websocket-SSH Python
+#Install Script Websocket-SSH Python
 wget -O /usr/local/bin/ws-openssh https://raw.githubusercontent.com/artanodrop/v4/main/sshws/openssh-socket.py
 wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/KhaiVpn767/v4/main/Sshws/dropbear-ws.py
 wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/KhaiVpn767/v4/main/Sshws/ws-stunnel
