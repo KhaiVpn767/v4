@@ -9,7 +9,7 @@ wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/KhaiVpn767/
 wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/KhaiVpn767/v4/main/Sshws/ws-stunnel
 wget -O /usr/local/bin/ws-ovpn https://raw.githubusercontent.com/${GitUser}/test1/${namafolder}/main/ws-ovpn && chmod +x /usr/local/bin/ws-ovpn
 
-izin permision
+#izin permision
 chmod +x /usr/local/bin/ws-openssh
 chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-stunnel
