@@ -60,7 +60,8 @@ vlesslink5="vless://${uuid}@162.159.134.61:80?path=/vless&encryption=none&host=$
 vlesslink6="vless://${uuid}@${domain}:80?path=/vless&encryption=none&host=m.pubgmobile.com&type=ws#Server:$creditt-UMOBILE-FUNZ-${user}"
 vlesslink7="vless://${uuid}@104.17.113.188:80?path=/vless&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#Server:$creditt-YES-${user}"
 vlesslink8="vless://${uuid}@104.17.148.22:80?path=/vless&encryption=none&host=www.speedtest.net.${domain}&type=ws#Server:$creditt-SELCOM-0BASIC-${user}"
-vlesslink9="vless://${uuid}@104.17.10.12:80?path=/vless&encryption=none&host=cdn.who.int.${domain}&type=ws#Server:$creditt-UNIFI-${user}"
+vlesslink9="vless://${uuid}@104.17.10.12:80?path=/vless&encryption=none&host=cdn.who.int.${domain}&type=ws#Server:$creditt-UNIFI-Bebas-${user}"
+vlesslink10="vless://${uuid}@speedtest.unifi.com.my.${domain}:80?path=/vless&encryption=none&host=&type=ws#Server:$creditt-Uni5G-${user}"
 
 
 if [ ! -e /etc/vless ]; then
@@ -176,6 +177,9 @@ ${vlesslink8}
 Link none TLS : 
 ${vlesslink9}
 ◇━━━━━━━━━━━━━━━━━◇
+Link none TLS : 
+${vlesslink10}
+◇━━━━━━━━━━━━━━━━━◇
 
 
 END
@@ -217,7 +221,9 @@ echo -e "Link YES.        : ${vlesslink7}"
 echo -e "\033[1;93m☉————————————————————————☉\033[0m"
 echo -e "Link SELCOM-0BASIC: ${vlesslink8}"
 echo -e "\033[1;93m☉————————————————————————☉\033[0m"
-echo -e "Link UNIFI.      : ${vlesslink9}"
+echo -e "Link UNIFI-Bebas. : ${vlesslink9}"
+echo -e "\033[1;93m☉————————————————————————☉\033[0m"
+echo -e "Link UNIFI-Uni5G. : ${vlesslink10}"
 echo -e "\033[1;93m☉————————————————————————☉\033[0m"
 echo -e "Format OpenClash : https://${domain}:81/vless-$user.txt"
 echo -e "\033[1;93m☉————————————————————————☉\033[0m"
