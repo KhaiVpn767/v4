@@ -161,31 +161,31 @@ echo -e ""
 echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
 echo -e "🧿Status Create VLESS Succes🧿           " | tee -a /etc/user-create/user.log
 echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
-echo -e "Remarks     : ${user}" | tee -a /etc/user-create/user.log
-echo -e "Domain      : ${domain}" | tee -a /etc/user-create/user.log
-echo -e "User Quota  : ${Quota} GB" | tee -a /etc/user-create/user.log
-echo -e "User Ip       : ${iplimit} IP" | tee -a /etc/user-create/user.log
-echo -e "port TLS    : 400-900" | tee -a /etc/user-create/user.log
+echo -e "Remarks     : ${user}"
+echo -e "Domain      : ${domain}"
+echo -e "User Quota  : ${Quota} GB"
+echo -e "User Ip       : ${iplimit} IP"
+echo -e "port TLS    : 400-900"
 #echo -e "Port DNS    : 443" | tee -a /etc/user-create/user.log
-echo -e "Port NTLS   : 80, 8080, 8880, 2082" | tee -a /etc/user-create/user.log
-echo -e "User ID     : ${uuid}" | tee -a /etc/user-create/user.log
+echo -e "Port NTLS   : 80, 8080, 8880, 2082"
+echo -e "User ID     : ${uuid}"
 #echo -e "Xray Dns.   : ${NS}" | tee -a /etc/user-create/user.log
 #echo -e "Pubkey.     : ${PUB}" | tee -a /etc/user-create/user.log
-echo -e "Encryption  : none" | tee -a /etc/user-create/user.log
-echo -e "Path TLS    : /vless/multi-path " | tee -a /etc/user-create/user.log
-echo -e "ServiceName : vless-grpc" | tee -a /etc/user-create/user.log
+echo -e "Encryption  : none"
+echo -e "Path TLS    : /vless/multi-path "
+echo -e "ServiceName : vless-grpc"
 echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
-echo -e "Link TLS    : ${vlesslink1}" | tee -a /etc/user-create/user.log
+echo -e "Link TLS    : ${vlesslink1}"
 echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
-echo -e "Link NTLS   : ${vlesslink2}" | tee -a /etc/user-create/user.log
+echo -e "Link NTLS   : ${vlesslink2}"
 echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
-echo -e "Link GRPC   : ${vlesslink3}" | tee -a /etc/user-create/user.log
-echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
-echo -e "Format OpenClash : https://${domain}:81/vless-$user.txt" | tee -a /etc/user-create/user.log
-echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
-echo -e "Aktif Selama     : $masaaktif Hari" | tee -a /etc/user-create/user.log
-echo -e "Dibuat Pada      : $tnggl" | tee -a /etc/user-create/user.log
-echo -e "Berakhir Pada    : $expe" | tee -a /etc/user-create/user.log
+echo -e "Link GRPC   : ${vlesslink3}"
+echo -e "\033[1;93m☉————————————————————————☉\033[0m"
+echo -e "Format OpenClash : https://${domain}:81/vless-$user.txt"
+echo -e "\033[1;93m☉————————————————————————☉\033[0m"
+echo -e "Aktif Selama     : $masaaktif Hari"
+echo -e "Dibuat Pada      : $tnggl"
+echo -e "Berakhir Pada    : $expe"
 echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
 echo "" | tee -a /etc/user-create/user.log
 read -p "Enter Back To menu"
