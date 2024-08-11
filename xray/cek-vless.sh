@@ -14,68 +14,44 @@ LIGHT='\033[0;37m'
 # Getting
 
 clear
-export patchtls=/vless
-export patchnontls=/vless
-export user=$(grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
-export harini=$(grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p)
-export exp=$(grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
-export uuid=$(grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 5 | sed -n "${CLIENT_NUMBER}"p)
+echo -n > /tmp/other.txt
+data=( `cat /etc/xray/config.json | grep '^####' | cut -d ' ' -f 2`);
+echo "----------------------------------------";
+echo "---------=[ Vless User Login ]=---------";
+echo "----------------------------------------";
+for akun in "${data[@]}"
+do
+if [[ -z "$akun" ]]; then
+akun="tidakada"
+fi
+echo -n > /tmp/ipvless.txt
+data2=( `netstat -anp | grep ESTABLISHED | grep tcp6 | grep xray | awk '{print $5}' | cut -d: -f1 | sort | uniq`);
+for ip in "${data2[@]}"
+do
+jum=$(cat /var/log/xray/access.log | grep -w $akun | awk '{print $3}' | cut -d: -f1 | grep -w $ip | sort | uniq)
+if [[ "$jum" = "$ip" ]]; then
+echo "$jum" >> /tmp/ipvless.txt
+else
+echo "$ip" >> /tmp/other.txt
+fi
+jum2=$(cat /tmp/ipvless.txt)
+sed -i "/$jum2/d" /tmp/other.txt > /dev/null 2>&1
+done
+jum=$(cat /tmp/ipvless.txt)
+if [[ -z "$jum" ]]; then
+echo > /dev/null
+else
+jum2=$(cat /tmp/ipvless.txt | nl)
+echo "user : $akun";
+echo "$jum2";
+echo "----------------------------------------"
+fi
+rm -rf /tmp/ipvless.txt
+done
+oth=$(cat /tmp/other.txt | sort | uniq | nl)
+echo "other";
+echo "$oth";
+echo "----------------------------------------"
+echo "Script Mod By khaiVPN"
+rm -rf /tmp/other.txt
 
-export vlesslink1="vless://${uuid}@${sts}${domain}:$tls?path=$patchtls&security=tls&encryption=none&type=ws&sni=$sni#${user}"
-export vlesslink2="vless://${uuid}@${sts}${domain}:$none?path=$patchnontls&encryption=none&host=$sni&type=ws#${user}"
-export vlesslink3="vless://${uuid}@api.useinsider.com:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#Server:$creditt-DIGI-APN-${user}"
-export vlesslink4="vless://${uuid}@162.159.134.61:$none?path=$patchnontls&encryption=none&host=${sts}${domain}&type=ws#Server:$creditt-DIGI-BOSSTER-${user}"
-export vlesslink5="vless://${uuid}@${domain}:$none?path=$patchnontls&encryption=none&host=m.pubgmobile.com&type=ws#Server:$creditt-UMOBILE-FUNZ-${user}"
-export vlesslink6="vless://${uuid}@104.17.113.188:$none?path=$patchnontls&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#Server:$creditt-YES-${user}"
-export vlesslink7="vless://${uuid}@104.18.203.232:$none?path=$patchnontls&encryption=none&host=www.speedtest.net.${domain}&type=ws#Server:$creditt-SELCOM-0BASIC-${user}"
-export vlesslink8="vless://${uuid}@104.17.10.12:$none?path=$patchnontls&encryption=none&host=cdn.who.int.${domain}&type=ws#Server:$creditt-UNIFI-${user}"
-
-systemctl restart xray@vless
-systemctl restart xray@vlessnone
-
-clear
-echo -e ""
-echo -e "${BIYellow} ═════════════════════════════════\e[m"
-echo -e "\e[$back_text      \e[30m[\e[$box XRAY VLESS WS\e[30m ]\e[1m          \e[m"
-echo -e "${BIYellow} ═════════════════════════════════\e[m"
-echo -e "${BIYellow} Remarks          : ${user}"
-echo -e "${BIYellow}Domain           : ${domain}"
-echo -e "${BIYellow}IP/Host          : $MYIP"
-echo -e "${BIYellow}Port TLS         : $tls"
-echo -e "${BIYellow}Port None TLS    : $none"
-echo -e "${BIYellow}User ID          : ${uuid}"
-echo -e "${BIYellow}Encryption       : None"
-echo -e "${BIYellow}Network          : WebSocket"
-echo -e "${BIYellow}Path Tls         : $patchtls"
-echo -e "${BIYellow}Path None Tls    : $patchnontls"
-echo -e "${BIYellow}allowInsecure    : True/allow"
-echo -e "${BIYellow}${BIYellow} ═════════════════════════════════\e[m"
-echo -e "${BIYellow}Script By $creditt"
-echo -e "${BIYellow} ═════════════════════════════════\e[m"
-echo -e "${BIYellow}Link TLS         : ${vlesslink1}"
-echo -e "${BIYellow} ═════════════════════════════════\e[m"
-echo -e "${BIYellow}Link None TLS    : ${vlesslink2}"
-echo -e "${BIYellow} ═════════════════════════════════\e[m"
-echo -e "${BIYellow}Link DIGI APN     : ${vlesslink3}"
-echo -e "${BIYellow} ═════════════════════════════════\e[m"
-echo -e "${BIYellow}Link DIGI-BOSSTER : ${vlesslink4}"
-echo -e "${BIYellow} ═════════════════════════════════\e[m"
-echo -e "${BIYellow}Link UMOBILE-FUNZ : ${vlesslink5}"
-echo -e "${BIYellow} ═════════════════════════════════\e[m"
-echo -e "${BIYellow}Link YES          : ${vlesslink6}"
-echo -e "${BIYellow} ═════════════════════════════════\e[m"
-echo -e "${BIYellow}Link SELCOM-0BASIC: ${vlesslink7}"
-echo -e "${BIYellow} ═════════════════════════════════\e[m"
-echo -e "${BIYellow}Link UNIFI        : ${vlesslink8}"
-echo -e "${BIYellow} ═════════════════════════════════\e[m"
-echo -e "${BIYellow} ══════════════════════\e[m"
-echo -e "${BIYellow}Name      : ${user}"
-echo -e "Created   : $harini"
-echo -e "${BIYellow}Expired   : $exp"
-echo -e "${BIYellow}SerVer    : $creditt"
-echo -e "${BIYellow} ══════════════════════\e[m"
-echo ""
-echo ""
-read -n 1 -s -r -p "Press any key to back on menu xray"
-menu-vless
-}
