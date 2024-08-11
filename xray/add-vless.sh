@@ -55,6 +55,14 @@ sed -i '/#vlessgrpc$/a\#& '"$user $exp"'\
 vlesslink1="vless://${uuid}@${domain}:443?path=/vless&security=tls&encryption=none&type=ws#${user}"
 vlesslink2="vless://${uuid}@${domain}:80?path=/vless&encryption=none&type=ws#${user}"
 vlesslink3="vless://${uuid}@${domain}:443?mode=gun&security=tls&encryption=none&type=grpc&serviceName=vless-grpc&sni=${domain}#${user}"
+vlesslink4="vless://${uuid}@api.useinsider.com:80?path=/vless&encryption=none&host=${sts}${domain}&type=ws#Server:$creditt-DIGI-APN-${user}"
+vlesslink5="vless://${uuid}@162.159.134.61:80?path=/vless&encryption=none&host=${sts}${domain}&type=ws#Server:$creditt-DIGI-BOSSTER-${user}"
+vlesslink6="vless://${uuid}@${domain}:80?path=/vless&encryption=none&host=m.pubgmobile.com&type=ws#Server:$creditt-UMOBILE-FUNZ-${user}"
+vlesslink7="vless://${uuid}@104.17.113.188:80?path=/vless&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#Server:$creditt-YES-${user}"
+vlesslink8="vless://${uuid}@104.17.148.22:80?path=/vless&encryption=none&host=www.speedtest.net.${domain}&type=ws#Server:$creditt-SELCOM-0BASIC-${user}"
+vlesslink9="vless://${uuid}@104.17.10.12:80?path=/vless&encryption=none&host=cdn.who.int.${domain}&type=ws#Server:$creditt-UNIFI-${user}"
+
+
 if [ ! -e /etc/vless ]; then
   mkdir -p /etc/vless
 fi
@@ -150,6 +158,24 @@ ${vlesslink2}
 Link GRPC     : 
 ${vlesslink3}
 ◇━━━━━━━━━━━━━━━━━◇
+Link none TLS : 
+${vlesslink4}
+◇━━━━━━━━━━━━━━━━━◇
+Link none TLS : 
+${vlesslink5}
+◇━━━━━━━━━━━━━━━━━◇
+Link none TLS : 
+${vlesslink6}
+◇━━━━━━━━━━━━━━━━━◇
+Link none TLS : 
+${vlesslink7}
+◇━━━━━━━━━━━━━━━━━◇
+Link none TLS : 
+${vlesslink8}
+◇━━━━━━━━━━━━━━━━━◇
+Link none TLS : 
+${vlesslink9}
+◇━━━━━━━━━━━━━━━━━◇
 
 
 END
@@ -163,7 +189,7 @@ echo -e "🧿Status Create VLESS Succes🧿           "
 echo -e "\033[1;93m☉————————————————————————☉\033[0m"
 echo -e "Remarks     : ${user}"
 echo -e "Domain      : ${domain}"
-echo -e "User Quota  : ${Quota} GB"
+#echo -e "User Quota  : ${Quota} GB"
 echo -e "User Ip       : ${iplimit} IP"
 echo -e "port TLS    : 400-900"
 #echo -e "Port DNS    : 443" | tee -a /etc/user-create/user.log
@@ -180,6 +206,18 @@ echo -e "\033[1;93m☉———————————————————�
 echo -e "Link NTLS   : ${vlesslink2}"
 echo -e "\033[1;93m☉————————————————————————☉\033[0m"
 echo -e "Link GRPC   : ${vlesslink3}"
+echo -e "\033[1;93m☉————————————————————————☉\033[0m"
+echo -e "Link NTLS   : ${vlesslink4}"
+echo -e "\033[1;93m☉————————————————————————☉\033[0m"
+echo -e "Link NTLS   : ${vlesslink5}"
+echo -e "\033[1;93m☉————————————————————————☉\033[0m"
+echo -e "Link NTLS   : ${vlesslink6}"
+echo -e "\033[1;93m☉————————————————————————☉\033[0m"
+echo -e "Link NTLS   : ${vlesslink7}"
+echo -e "\033[1;93m☉————————————————————————☉\033[0m"
+echo -e "Link NTLS   : ${vlesslink8}"
+echo -e "\033[1;93m☉————————————————————————☉\033[0m"
+echo -e "Link NTLS   : ${vlesslink9}"
 echo -e "\033[1;93m☉————————————————————————☉\033[0m"
 echo -e "Format OpenClash : https://${domain}:81/vless-$user.txt"
 echo -e "\033[1;93m☉————————————————————————☉\033[0m"
