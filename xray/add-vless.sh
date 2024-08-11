@@ -36,7 +36,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 done
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
-read -p "Limit User (GB): " Quota
+#read -p "Limit User (GB): " Quota
 read -p "Limit User (IP): " iplimit
 tgl=$(date -d "$masaaktif days" +"%d")
 bln=$(date -d "$masaaktif days" +"%b")
@@ -158,9 +158,9 @@ systemctl restart xray
 systemctl restart nginx
 clear
 echo -e ""
-echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
-echo -e "🧿Status Create VLESS Succes🧿           " | tee -a /etc/user-create/user.log
-echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
+echo -e "\033[1;93m☉————————————————————————☉\033[0m"
+echo -e "🧿Status Create VLESS Succes🧿           "
+echo -e "\033[1;93m☉————————————————————————☉\033[0m"
 echo -e "Remarks     : ${user}"
 echo -e "Domain      : ${domain}"
 echo -e "User Quota  : ${Quota} GB"
@@ -174,11 +174,11 @@ echo -e "User ID     : ${uuid}"
 echo -e "Encryption  : none"
 echo -e "Path TLS    : /vless/multi-path "
 echo -e "ServiceName : vless-grpc"
-echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
+echo -e "\033[1;93m☉————————————————————————☉\033[0m"
 echo -e "Link TLS    : ${vlesslink1}"
-echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
+echo -e "\033[1;93m☉————————————————————————☉\033[0m"
 echo -e "Link NTLS   : ${vlesslink2}"
-echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
+echo -e "\033[1;93m☉————————————————————————☉\033[0m"
 echo -e "Link GRPC   : ${vlesslink3}"
 echo -e "\033[1;93m☉————————————————————————☉\033[0m"
 echo -e "Format OpenClash : https://${domain}:81/vless-$user.txt"
@@ -186,7 +186,7 @@ echo -e "\033[1;93m☉———————————————————�
 echo -e "Aktif Selama     : $masaaktif Hari"
 echo -e "Dibuat Pada      : $tnggl"
 echo -e "Berakhir Pada    : $expe"
-echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
-echo "" | tee -a /etc/user-create/user.log
+echo -e "\033[1;93m☉————————————————————————☉\033[0m"
+echo ""
 read -p "Enter Back To menu"
 menu
