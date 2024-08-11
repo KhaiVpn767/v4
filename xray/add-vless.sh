@@ -10,129 +10,183 @@ URL="https://api.telegram.org/bot$KEY/sendMessage"
 
 
 clear
-source /var/lib/SIJA/ipvps.conf
-if [[ "$IP" = "" ]]; then
+
 domain=$(cat /etc/xray/domain)
-else
-domain=$IP
-fi
-tls="$(cat ~/log-install.txt | grep -w "Vless TLS" | cut -d: -f2|sed 's/ //g')"
-none="$(cat ~/log-install.txt | grep -w "Vless None TLS" | cut -d: -f2|sed 's/ //g')"
-until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[40;1;37m      Add Xray/Vless Account      \E[0m"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-
-		read -rp "User: " -e user
-		CLIENT_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
-
-		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 clear
-		echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-		echo -e "\E[40;1;37m      Add Xray/Vless Account      \E[0m"
-		echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-			echo ""
-			echo "A client with the specified name was already created, please choose another name."
-			echo ""
-			read -n 1 -s -r -p "Press any key to back on menu"
-			v2ray-menu
-		fi
-	done
+until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
+  echo -e "\033[1;93m☉————————————————————————☉\033[0m"
+  echo -e " CREATE VLESS ACCOUNT           "
+  echo -e "\033[1;93m☉————————————————————————☉\033[0m"
 
+  read -rp "User: " -e user
+  CLIENT_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
+
+  if [[ ${CLIENT_EXISTS} == '1' ]]; then
+    clear
+  echo -e "\033[1;93m☉————————————————————————☉\033[0m"
+  echo -e " CREATE VLESS ACCOUNT           "
+  echo -e "\033[1;93m☉————————————————————————☉\033[0m"
+    echo ""
+    echo "A client with the specified name was already created, please choose another name."
+    echo ""
+    echo -e "\033[0;34m☉————————————————————————☉\033[0m"
+    read -n 1 -s -r -p "Press any key to back on menu"
+    menu
+  fi
+done
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
-exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+read -p "Limit User (GB): " Quota
+read -p "Limit User (IP): " iplimit
+tgl=$(date -d "$masaaktif days" +"%d")
+bln=$(date -d "$masaaktif days" +"%b")
+thn=$(date -d "$masaaktif days" +"%Y")
+expe="$tgl $bln, $thn"
+tgl2=$(date +"%d")
+bln2=$(date +"%b")
+thn2=$(date +"%Y")
+tnggl="$tgl2 $bln2, $thn2"
+exp=$(date -d "$masaaktif days" +"%Y-%m-%d")
 sed -i '/#vless$/a\#& '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
 sed -i '/#vlessgrpc$/a\#& '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
-export vlesslink1="vless://${uuid}@${sts}${domain}:443?path=/vless&security=tls&encryption=none&type=ws&sni=$sni#${user}"
-export vlesslink2="vless://${uuid}@${sts}${domain}:80?path=/vless&encryption=none&host=$sni&type=ws#${user}"
-export vlesslink3="vless://${uuid}@api.useinsider.com:80?path=/vless&encryption=none&host=${sts}${domain}&type=ws#Server:$creditt-DIGI-APN-${user}"
-export vlesslink4="vless://${uuid}@162.159.134.61:80?path=/vless&encryption=none&host=${sts}${domain}&type=ws#Server:$creditt-DIGI-BOSSTER-${user}"
-export vlesslink5="vless://${uuid}@${domain}:80?path=/vless&encryption=none&host=m.pubgmobile.com&type=ws#Server:$creditt-UMOBILE-FUNZ-${user}"
-export vlesslink6="vless://${uuid}@104.17.113.188:80?path=/vless&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#Server:$creditt-YES-${user}"
-export vlesslink7="vless://${uuid}@104.17.148.22:80?path=/vless&encryption=none&host=www.speedtest.net.${domain}&type=ws#Server:$creditt-SELCOM-0BASIC-${user}"
-export vlesslink8="vless://${uuid}@104.17.10.12:80?path=/vless&encryption=none&host=cdn.who.int.${domain}&type=ws#Server:$creditt-UNIFI-${user}"
-systemctl restart xray
+
+vlesslink1="vless://${uuid}@${domain}:443?path=/vless&security=tls&encryption=none&type=ws#${user}"
+vlesslink2="vless://${uuid}@${domain}:80?path=/vless&encryption=none&type=ws#${user}"
+vlesslink3="vless://${uuid}@${domain}:443?mode=gun&security=tls&encryption=none&type=grpc&serviceName=vless-grpc&sni=${domain}#${user}"
+if [ ! -e /etc/vless ]; then
+  mkdir -p /etc/vless
+fi
+
+if [[ $iplimit -gt 0 ]]; then
+mkdir -p /etc/kyt/limit/vless/ip
+echo -e "$iplimit" > /etc/kyt/limit/vless/ip/$user
+else
+echo > /dev/null
+fi
+
+if [ -z ${Quota} ]; then
+  Quota="0"
+fi
+
+c=$(echo "${Quota}" | sed 's/[^0-9]*//g')
+d=$((${c} * 1024 * 1024 * 1024))
+
+if [[ ${c} != "0" ]]; then
+  echo "${d}" >/etc/vless/${user}
+fi
+DATADB=$(cat /etc/vless/.vless.db | grep "^###" | grep -w "${user}" | awk '{print $2}')
+if [[ "${DATADB}" != '' ]]; then
+  sed -i "/\b${user}\b/d" /etc/vless/.vless.db
+fi
+echo "### ${user} ${exp} ${uuid} ${Quota} ${iplimit}" >>/etc/vless/.vless.db
 clear
-vless1="$(echo $vlesslink1 | base64 -w 0)"
-vless2="$(echo $vlesslink2 | base64 -w 0)"
-vless3="$(echo $vlesslink3 | base64 -w 0)"
-vless4="$(echo $vlesslink4 | base64 -w 0)"
-vless5="$(echo $vlesslink5 | base64 -w 0)"
-vless6="$(echo $vlesslink6 | base64 -w 0)"
-vless7="$(echo $vlesslink7 | base64 -w 0)"
-vless8="$(echo $vlesslink8 | base64 -w 0)"
+cat >/var/www/html/vless-$user.txt <<-END
 
-TEXT="
-<code>◇═══════════════════◇</code>
-<code> 🔱 Premium Vless Account 🔱</code>
-<code>◇═══════════════════◇</code>
-<code>Remarks      : </code> <code>${user}</code>
-<code>Domain       : </code> <code>${domain}</code>
-<code>Port TLS     : 443</code>
-<code>Port NTLS    : 80, 8080</code>
-<code>Port GRPC    : 443</code>
-<code>User ID      : </code> <code>${uuid}</code>
-<code>AlterId      : 0</code>
-<code>Security     : auto</code>
-<code>Network      : WS or gRPC</code>
-<code>Path vless   : </code> <code>/vless</code>
-<code>ServiceName  : </code> <code>/vless-grpc</code>
-<code>◇═══════════════════◇</code>
-<code>Link TLS     :</code> 
-<code>${vless1}</code>
-<code>◇═══════════════════◇</code>
-<code>Link NTLS    :</code> 
-<code>${vless2}</code>
-<code>◇═══════════════════◇</code>
-<code>Expired On : </code> <code>$exp</code>
-📡@TazVPN
-"
+◇━━━━━━━━━━━━━━━━━◇
+   Format For Clash
+◇━━━━━━━━━━━━━━━━━◇
+# Format Vless WS TLS
 
-curl -s --max-time $TIMES -d "chat_id=$CHATID&disable_web_page_preview=1&text=$TEXT&parse_mode=html" $URL >/dev/null
+- name: Vless-$user-WS TLS
+  server: ${domain}
+  port: 443
+  type: vless
+  uuid: ${uuid}
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: ${domain}
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: ${domain}
+
+# Format Vless WS Non TLS
+
+- name: Vless-$user-WS (CDN) Non TLS
+  server: ${domain}
+  port: 80
+  type: vless
+  uuid: ${uuid}
+  cipher: auto
+  tls: false
+  skip-cert-verify: false
+  servername: ${domain}
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: ${domain}
+  udp: true
+
+# Format Vless gRPC (SNI)
+
+- name: Vless-$user-gRPC (SNI)
+  server: ${domain}
+  port: 443
+  type: vless
+  uuid: ${uuid}
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: ${domain}
+  network: grpc
+  grpc-opts:
+  grpc-mode: gun
+    grpc-service-name: vless-grpc
+
+◇━━━━━━━━━━━━━━━━━◇
+Link Akun Vless 
+◇━━━━━━━━━━━━━━━━━◇
+Link TLS      : 
+${vlesslink1}
+◇━━━━━━━━━━━━━━━━━◇
+Link none TLS : 
+${vlesslink2}
+◇━━━━━━━━━━━━━━━━━◇
+Link GRPC     : 
+${vlesslink3}
+◇━━━━━━━━━━━━━━━━━◇
 
 
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\E[40;1;37m        Xray/Vless Account        \E[0m" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Remarks        : ${user}" | tee -a /etc/log-create-user.log
-echo -e "Domain         : ${domain}" | tee -a /etc/log-create-user.log
-echo -e "port TLS       : $tls" | tee -a /etc/log-create-user.log
-echo -e "port none TLS  : $none" | tee -a /etc/log-create-user.log
-echo -e "id             : ${uuid}" | tee -a /etc/log-create-user.log
-echo -e "Encryption     : none" | tee -a /etc/log-create-user.log
-echo -e "Network        : ws" | tee -a /etc/log-create-user.log
-echo -e "Path           : /vless" | tee -a /etc/log-create-user.log
-echo -e "Path           : vless-grpc" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Link TLS       : ${vlesslink1}" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Link none TLS  : ${vlesslink2}" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Link DIGI APN     : ${vlesslink3}" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Link DIGI-BOSSTER : ${vlesslink4}" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Link UMOBILE-FUNZ : ${vlesslink5}" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Link YES          : ${vlesslink6}" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Link SELCOM-0BASIC: ${vlesslink7}" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "Link UNIFI        : ${vlesslink8}" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-echo -e "\e[33m name      : ${user}" | tee -a /etc/log-create-user.log
-echo -e "\e[33mExpired On : $exp" | tee -a /etc/log-create-user.log
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
-read -n 1 -s -r -p "Press any key to back on menu"
+END
 
+systemctl restart xray
+systemctl restart nginx
+clear
+echo -e ""
+echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
+echo -e "🧿Status Create VLESS Succes🧿           " | tee -a /etc/user-create/user.log
+echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
+echo -e "Remarks     : ${user}" | tee -a /etc/user-create/user.log
+echo -e "Domain      : ${domain}" | tee -a /etc/user-create/user.log
+echo -e "User Quota  : ${Quota} GB" | tee -a /etc/user-create/user.log
+echo -e "User Ip       : ${iplimit} IP" | tee -a /etc/user-create/user.log
+echo -e "port TLS    : 400-900" | tee -a /etc/user-create/user.log
+#echo -e "Port DNS    : 443" | tee -a /etc/user-create/user.log
+echo -e "Port NTLS   : 80, 8080, 8880, 2082" | tee -a /etc/user-create/user.log
+echo -e "User ID     : ${uuid}" | tee -a /etc/user-create/user.log
+#echo -e "Xray Dns.   : ${NS}" | tee -a /etc/user-create/user.log
+#echo -e "Pubkey.     : ${PUB}" | tee -a /etc/user-create/user.log
+echo -e "Encryption  : none" | tee -a /etc/user-create/user.log
+echo -e "Path TLS    : /vless/multi-path " | tee -a /etc/user-create/user.log
+echo -e "ServiceName : vless-grpc" | tee -a /etc/user-create/user.log
+echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
+echo -e "Link TLS    : ${vlesslink1}" | tee -a /etc/user-create/user.log
+echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
+echo -e "Link NTLS   : ${vlesslink2}" | tee -a /etc/user-create/user.log
+echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
+echo -e "Link GRPC   : ${vlesslink3}" | tee -a /etc/user-create/user.log
+echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
+echo -e "Format OpenClash : https://${domain}:81/vless-$user.txt" | tee -a /etc/user-create/user.log
+echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
+echo -e "Aktif Selama     : $masaaktif Hari" | tee -a /etc/user-create/user.log
+echo -e "Dibuat Pada      : $tnggl" | tee -a /etc/user-create/user.log
+echo -e "Berakhir Pada    : $expe" | tee -a /etc/user-create/user.log
+echo -e "\033[1;93m☉————————————————————————☉\033[0m" | tee -a /etc/user-create/user.log
+echo "" | tee -a /etc/user-create/user.log
+read -p "Enter Back To menu"
 menu
