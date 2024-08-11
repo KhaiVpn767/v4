@@ -1,59 +1,82 @@
 #!/bin/bash
-# SL
-# ==========================================
-# Color
-RED='\033[0;31m'
-NC='\033[0m'
-GREEN='\033[0;32m'
-ORANGE='\033[0;33m'
-BLUE='\e[33m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-LIGHT='\033[0;37m'
-# ==========================================
-# Getting
+red='\e[1;31m'
+green='\e[0;32m'
+NC='\e[0m'
+green() { echo -e "\\033[32;1m${*}\\033[0m"; }
+red() { echo -e "\\033[31;1m${*}\\033[0m"; }
+clear
+
+NUMBER_OF_CLIENTS=$(grep -c -E "^#& " "/etc/xray/config.json")
+	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
+		clear
+        echo -e "\033[0;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+        echo -e "            Renew Vless          \E[0m"
+        echo -e "\033[0;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+		echo ""
+		echo "You have no existing clients!"
+		echo ""
+		echo -e "\033[0;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+        echo ""
+        read -n 1 -s -r -p "Press any key to back on menu"
+        menu
+	fi
 
 	clear
-	echo "Renew User Xray Vless Ws"
-	echo "Select the existing client you want to renew"
-	echo " Press CTRL+C to return"
-	echo -e "==============================="
-	grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 2-3 | nl -s ') '
-	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
-		if [[ ${CLIENT_NUMBER} == '1' ]]; then
-			read -rp "Select one client [1]: " CLIENT_NUMBER
-		else
-			read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
-		fi
-	done
-read -p "Expired (days): " masaaktif
-export harini=$(grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 4 | sed -n "${CLIENT_NUMBER}"p)
-export uuid=$(grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 5 | sed -n "${CLIENT_NUMBER}"p)
-export user=$(grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 2 | sed -n "${CLIENT_NUMBER}"p)
-export exp=$(grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 3 | sed -n "${CLIENT_NUMBER}"p)
-export now=$(date +%Y-%m-%d)
-export d1=$(date -d "$exp" +%s)
-export d2=$(date -d "$now" +%s)
-export exp2=$(( (d1 - d2) / 86400 ))
-export exp3=$(($exp2 + $masaaktif))
-export exp4=`date -d "$exp3 days" +"%Y-%m-%d"`
+	echo -e "\033[0;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+    echo -e "            Renew Vless         \E[0m"
+    echo -e "\033[0;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+    echo ""
+  	grep -E "^#& " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq
+    echo ""
+    red "tap enter to go back"
+    echo -e "\033[0;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+	read -rp "Input Username : " user
+    if [ -z $user ]; then
+    menu
+    else
+    rm -f /etc/kyt/limit/vless/ip/${user}
+    rm -f /etc/vless/$user
+    read -p "Expired (days): " masaaktif
+    read -p "Limit User (GB): " Quota
+    read -p "Limit User (IP): " iplim
+    exp=$(grep -wE "^#& $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq)
+    mkdir -p /etc/kyt/limit/vless/ip
+echo ${iplim} >> /etc/kyt/limit/vless/ip/${user}
+if [ ! -e /etc/vless/ ]; then
+  mkdir -p /etc/vless/
+fi
 
-sed -i "s/#vls $user $exp $harini $uuid/#vls $user $exp4 $harini $uuid/g" /usr/local/etc/xray/vless.json
-sed -i "s/#vls $user $exp $harini $uuid/#vls $user $exp4 $harini $uuid/g" /usr/local/etc/xray/vlessnone.json
+if [ -z ${Quota} ]; then
+  Quota="0"
+fi
 
-systemctl restart xray@vless
-systemctl restart xray@vlessnone
-service cron restart
+c=$(echo "${Quota}" | sed 's/[^0-9]*//g')
+d=$((${c} * 1024 * 1024 * 1024))
 
-clear
-echo ""
-echo " VLESS WS Account Was Successfully Renewed"
-echo -e "\e[$line══════════════════════\e[m"
-echo -e "Client Name : $user"
-echo -e "Expired On  : $exp4"
-echo -e "SerVer      : $creditt"
-echo -e "\e[$line══════════════════════\e[m"
-echo ""
-read -n 1 -s -r -p "Press any key to back on menu xray"
-xraay
-}
+if [[ ${c} != "0" ]]; then
+  echo "${d}" >/etc/vless/${user}
+fi
+    now=$(date +%Y-%m-%d)
+    d1=$(date -d "$exp" +%s)
+    d2=$(date -d "$now" +%s)
+    exp2=$(( (d1 - d2) / 86400 ))
+    exp3=$(($exp2 + $masaaktif))
+    exp4=`date -d "$exp3 days" +"%Y-%m-%d"`
+    sed -i "/#& $user/c\#& $user $exp4" /etc/xray/config.json
+    sed -i "/#& $user/c\#& $user $exp4" /root/akun/vless/.vless.conf
+    systemctl restart xray > /dev/null 2>&1
+    clear
+    echo -e "\033[0;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+    echo " VLESS Account Was Successfully Renewed"
+    echo -e "\033[0;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+    echo ""
+    echo " Client Name : $user"
+    echo " Expired On  : $exp4"
+    echo " User Quota  : $Quota"
+    echo " User Limit IP: $iplim"
+    echo ""
+    echo -e "\033[0;33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+    echo ""
+    read -n 1 -s -r -p "Press any key to back on menu"
+    menu
+    fi
