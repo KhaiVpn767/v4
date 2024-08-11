@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script Mod by IMMANVPN
+# Script Mod by khaiVPN
 #!/bin/bash
 clear
 MAX=1
