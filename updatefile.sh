@@ -11,6 +11,7 @@ rm -rf menu-vmess
 rm -rf menu-vlesss
 rm -rf renew-vless
 rm -rf cek-vless
+rm -rf add-vless2
 rm -rf running
 rm -rf clearcache
 rm -rf menu-trgo
@@ -70,6 +71,7 @@ wget -O trialvless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/tr
 wget -O add-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/add-vless.sh"
 wget -O renew-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/renew-vless.sh"
 wget -O cek-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/cek-vless.sh"
+wget -0 add-vless2 "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/add-vless2"
 
 # menu ssh ovpn
 wget -O menu-sshh "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-sshh.sh"
@@ -130,6 +132,7 @@ chmod +x trialvless
 chmod +x add-vless
 chmod +x renew-vless
 chmod +x cek-vless
+chmod +x add-vless2
 
 chmod +x menu-sshh
 chmod +x usernew
