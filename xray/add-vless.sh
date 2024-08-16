@@ -36,7 +36,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 done
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
-#read -p "Limit User (GB): " Quota
+read -p "Limit User (GB): " Quota
 read -p "Limit User (IP): " iplimit
 tgl=$(date -d "$masaaktif days" +"%d")
 bln=$(date -d "$masaaktif days" +"%b")
