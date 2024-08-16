@@ -110,6 +110,7 @@ wget -O acs-set "https://raw.githubusercontent.com/KhaiVpn767/v4/main/acs-set.sh
 wget -O sshws "https://raw.githubusercontent.com/KhaiVpn767/v4/main/ssh/sshws.sh"
 wget -O status "https://raw.githubusercontent.com/KhaiVpn767/v4/main/status.sh"
 wget -O /usr/bin/menu "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu.sh" && chmod +x /usr/bin/menu
+wget -0 menu-backup "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-backup.sh"
 wget -O /usr/bin/backup "https://raw.githubusercontent.com/KhaiVpn767/v4/main/backup/backup.sh" && chmod +x /usr/bin/backup
 wget -O /usr/bin/restore "https://raw.githubusercontent.com/KhaiVpn767/v4/main/backup/restore.sh" && chmod +x /usr/bin/restore
 wget -O /usr/bin/up "https://raw.githubusercontent.com/KhaiVpn767/v4/main/up.sh" && chmod +x /usr/bin/up
@@ -166,6 +167,7 @@ chmod +x acs-set
 chmod +x sshws
 chmod +x status
 chmod +x menu-bckp
+chmod +x menu-backup
 chmod +x backup
 chmod +x restore
 chmod +x jam
