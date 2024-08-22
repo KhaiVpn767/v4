@@ -51,9 +51,17 @@ vlesslink8="vless://${uuid}@104.17.148.22:80?path=/vless&encryption=none&host=ww
 vlesslink9="vless://${uuid}@104.17.10.12:80?path=/vless&encryption=none&host=cdn.who.int.${domain}&type=ws#Server:$creditt-UNIFI-Bebas-${user}"
 vlesslink10="vless://${uuid}@speedtest.unifi.com.my.${domain}:80?path=/vless&encryption=none&host=&type=ws#Server:$creditt-Uni5G-${user}"
 
-
-systemctl restart xray@vless
-systemctl restart xray@vlessnone
+clear
+vless1="$(echo $vlesslink1 | base64 -w 0)"
+vless2="$(echo $vlesslink2 | base64 -w 0)"
+vless3="$(echo $vlesslink3 | base64 -w 0)"
+vless4="$(echo $vlesslink3 | base64 -w 0)"
+vless5="$(echo $vlesslink3 | base64 -w 0)"
+vless6="$(echo $vlesslink3 | base64 -w 0)"
+vless7="$(echo $vlesslink3 | base64 -w 0)"
+vless8="$(echo $vlesslink3 | base64 -w 0)"
+vless9="$(echo $vlesslink3 | base64 -w 0)"
+vless10="$(echo $vlesslink3 | base64 -w 0)"
 
 ◇━━━━━━━━━━━━━━━━━◇
    Format For Clash
