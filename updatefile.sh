@@ -72,7 +72,7 @@ wget -O add-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/add
 wget -O renew-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/renew-vless.sh"
 wget -O cek-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/cek-vless.sh"
 wget -0 add-vless2 "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/add-vless2"
-wget -0 del-vless.sh "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/del-vless.sh"
+wget -0 del-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/del-vless.sh"
 
 # menu ssh ovpn
 wget -O menu-sshh "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-sshh.sh"
@@ -135,7 +135,7 @@ chmod +x add-vless
 chmod +x renew-vless
 chmod +x cek-vless
 chmod +x add-vless2
-chmod +x del-vless.sh
+chmod +x del-vless
 
 chmod +x menu-sshh
 chmod +x usernew
