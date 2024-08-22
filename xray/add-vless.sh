@@ -41,10 +41,18 @@ clear
 
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
-exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
+read -p "Limit User (GB): " Quota
+read -p "Limit User (IP): " iplimit
+tgl=$(date -d "$masaaktif days" +"%d")
+bln=$(date -d "$masaaktif days" +"%b")
+thn=$(date -d "$masaaktif days" +"%Y")
+expe="$tgl $bln, $thn"
+tgl2=$(date +"%d")
+bln2=$(date +"%b")
+thn2=$(date +"%Y")
+tnggl="$tgl2 $bln2, $thn2"
+exp=$(date -d "$masaaktif days" +"%Y-%m-%d")
 sed -i '/#vless$/a\#& '"$user $exp"'\
-},{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
-sed -i '/#vlessgrpc$/a\#& '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
 vlesslink1="vless://${uuid}@${domain}:443?path=/vless&security=tls&encryption=none&type=ws#${user}"
 vlesslink2="vless://${uuid}@${domain}:80?path=/vless&encryption=none&type=ws#${user}"
