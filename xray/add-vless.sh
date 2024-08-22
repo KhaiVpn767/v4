@@ -179,10 +179,10 @@ echo -e "\033[1;93m☉———————————————————�
 echo -e "Remarks     : ${user}"
 echo -e "Domain      : ${domain}"
 #echo -e "User Quota  : ${Quota} GB"
-echo -e "User Ip       : ${iplimit} IP"
-echo -e "port TLS    : 400-900"
+echo -e "User Ip     : ${iplimit} IP"
+echo -e "port TLS    : 443"
 #echo -e "Port DNS    : 443" | tee -a /etc/user-create/user.log
-echo -e "Port NTLS   : 80, 8080, 8880, 2082"
+echo -e "Port NTLS   : 80"
 echo -e "User ID     : ${uuid}"
 #echo -e "Xray Dns.   : ${NS}" | tee -a /etc/user-create/user.log
 #echo -e "Pubkey.     : ${PUB}" | tee -a /etc/user-create/user.log
