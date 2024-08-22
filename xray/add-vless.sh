@@ -187,7 +187,7 @@ echo -e "User ID     : ${uuid}"
 #echo -e "Xray Dns.   : ${NS}" | tee -a /etc/user-create/user.log
 #echo -e "Pubkey.     : ${PUB}" | tee -a /etc/user-create/user.log
 echo -e "Encryption  : none"
-echo -e "Path TLS    : /vless/multi-path "
+#echo -e "Path TLS    : /vless/multi-path "
 echo -e "ServiceName : vless-grpc"
 echo -e "\033[1;93m☉————————————————————————☉\033[0m"
 echo -e "Link TLS    : ${vlesslink1}"
