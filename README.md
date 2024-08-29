@@ -1,11 +1,3 @@
-## ♦️Update & Upgrade First Your VPS for Debian 10 & 11♦️
-
-```html
-  apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
-```
- or
- 
-
 ## ♦️Update & Upgrade First Your VPS for Ubuntu 18.04 & 20.04♦️
 
 ```html
