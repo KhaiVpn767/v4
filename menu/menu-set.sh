@@ -20,9 +20,8 @@ echo -e "         ${white}[•4]${NC} ${cyan}Restart service\033[0m"
 echo -e "         ${white}[•5]${NC} ${cyan}Cek bandwith\033[0m"
 echo -e "         ${white}[•6]${NC} ${cyan}Atur waktu riset\033[0m"
 echo -e "         ${white}[•7]${NC} ${cyan}Speedtest vps\033[0m"
-echo -e "         ${white}[•8]${NC} ${cyan}Webmin menu\033[0m"
 echo -e "         ${white}[•8]${NC} ${cyan}Backup-Bot-telegram\033[0m"
-echo -e "         ${white}[10]${NC} ${cyan}NS-Baru/SlowDns\033[0m"
+echo -e "         ${white}[•9]${NC} ${cyan}NS-Baru/SlowDns\033[0m"
 echo -e "         ${yelow}[•0]${NC} ${yelow}Back To Menu\033[0m"
 echo -e "         ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
 echo -e "${yellow}"
@@ -37,7 +36,7 @@ case $opt in
 6) clear ; auto-reboot ; exit ;;
 7) clear ; speedtest ; exit ;;
 8) clear ; wget https://raw.githubusercontent.com/KhaiVpn767/multiport/main/mbot-backup && chmod +x mbot-backup && ./mbot-backup ;;
-10) clear ; wget https://raw.githubusercontent.com/KhaiVpn767/SlowDnsV1/main/dns2.sh && chmod +x dns2.sh && ./dns2.sh ;;
+9) clear ; wget https://raw.githubusercontent.com/KhaiVpn767/SlowDnsV1/main/dns2.sh && chmod +x dns2.sh && ./dns2.sh ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo -e "" ; echo "salah tekan" ; sleep 1 ; menu-set ;;
