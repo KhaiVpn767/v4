@@ -38,6 +38,7 @@ clear
 			v2ray-menu
 		fi
 	done
+ grep -E "^#& " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq
 export patchtls=/vless
 export patchnontls=/vless
 export vlesslink1="vless://${uuid}@${sts}${domain}:443?path=/vless&security=tls&encryption=none&type=ws&sni=$sni#${user}"
