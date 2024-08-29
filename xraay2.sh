@@ -1,99 +1,41 @@
 #!/bin/bash
-#wget https://github.com/${GitUser}/
-GitUser="KhaiVpn767"
+dateFromServer=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
+biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
+#########################
 
-# // IZIN SCRIPT
-export MYIP=$(curl -sS ipv4.icanhazip.com)
+TIMES="10"
+CHATID=$(cat /etc/id)
+KEY=$(cat /etc/token)
+URL="https://api.telegram.org/bot$KEY/sendMessage"
 
-# Valid Script
-VALIDITY () {
-    clear
-    today=`date -d "0 days" +"%Y-%m-%d"`
-    Exp1=$(curl -sS https://raw.githubusercontent.com/KhaiVpn767/permission/main/ipmini | grep $MYIP | awk '{print $4}')
-    if [[ $today < $Exp1 ]]; then
-    echo -e "\e[32mYOUR SCRIPT ACTIVE..\e[0m"
-    else
-    echo -e "\e[31mYOUR SCRIPT HAS EXPIRED!\e[0m";
-    echo -e "\e[31mPlease renew your ipvps first\e[0m"
-    exit 0
-fi
-}
-IZIN=$(curl -sS https://raw.githubusercontent.com/KhaiVpn767/permission/main/ipmini | awk '{print $5}' | grep $MYIP)
-if [ $MYIP = $IZIN ]; then
-echo -e "\e[32mPermission Accepted...\e[0m"
-VALIDITY
-sleep 0.1
-else
-echo -e "\e[31mPermission Denied!\e[0m";
-echo -e "\e[31mPlease buy script first\e[0m"
-exit 0
-fi
 
-# // PROVIDED
 clear
-source /var/lib/premium-script/ipvps.conf
-export creditt=$(cat /root/provided)
-
-# // BANNER COLOUR
-export banner_colour=$(cat /etc/banner)
-
-# // TEXT ON BOX COLOUR
-export box=$(cat /etc/box)
-
-# // LINE COLOUR
-export line=$(cat /etc/line)
-
-# // TEXT COLOUR ON TOP
-export text=$(cat /etc/text)
-
-# // TEXT COLOUR BELOW
-export below=$(cat /etc/below)
-
-# // BACKGROUND TEXT COLOUR
-export back_text=$(cat /etc/back)
-
-# // NUMBER COLOUR
-export number=$(cat /etc/number)
-
-# // TOTAL ACC CREATE VMESS WS
-export total1=$(grep -c -E "^#vms " "/usr/local/etc/xray/vmess.json")
-
-# // TOTAL ACC CREATE  VLESS WS
-export total2=$(grep -c -E "^#vls " "/usr/local/etc/xray/vless.json")
-
-# // TOTAL ACC CREATE  VLESS TCP XTLS
-export total3=$(grep -c -E "^#vxtls " "/usr/local/etc/xray/config.json")
+source /var/lib/SIJA/ipvps.conf
 if [[ "$IP" = "" ]]; then
-     domain=$(cat /usr/local/etc/xray/domain)
+domain=$(cat /etc/xray/domain)
 else
-     domain=$IP
+domain=$IP
 fi
+tls="$(cat ~/log-install.txt | grep -w "Vless TLS" | cut -d: -f2|sed 's/ //g')"
+none="$(cat ~/log-install.txt | grep -w "Vless None TLS" | cut -d: -f2|sed 's/ //g')"
+until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\E[40;1;37m      Add Xray/Vless Account      \E[0m"
+echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 
-# show user vless ws
-function menu11 () {
+		read -rp "User: " -e user
+		CLIENT_EXISTS=$(grep -w $user /etc/xray/config.json | wc -l)
+
+		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 clear
-tls="$(cat ~/log-install.txt | grep -w "Vless Ws Tls" | cut -d: -f2|sed 's/ //g')"
-none="$(cat ~/log-install.txt | grep -w "Vless Ws None Tls" | cut -d: -f2|sed 's/ //g')"
-NUMBER_OF_CLIENTS=$(grep -c -E "^#vls " "/usr/local/etc/xray/vless.json")
-	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
-		clear
-		echo ""
-		echo "You have no existing clients!"
-		exit 1
-	fi
-
-	clear
-	echo ""
-	echo "SHOW USER XRAY VLESS WS"
-	echo "Select the existing client you want to renew"
-	echo " Press CTRL+C to return"
-	echo -e "==============================="
-	grep -E "^#vls " "/usr/local/etc/xray/vless.json" | cut -d ' ' -f 2-3 | nl -s ') '
-	until [[ ${CLIENT_NUMBER} -ge 1 && ${CLIENT_NUMBER} -le ${NUMBER_OF_CLIENTS} ]]; do
-		if [[ ${CLIENT_NUMBER} == '1' ]]; then
-			read -rp "Select one client [1]: " CLIENT_NUMBER
-		else
-			read -rp "Select one client [1-${NUMBER_OF_CLIENTS}]: " CLIENT_NUMBER
+		echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+		echo -e "\E[40;1;37m      Add Xray/Vless Account      \E[0m"
+		echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+			echo ""
+			echo "A client with the specified name was already created, please choose another name."
+			echo ""
+			read -n 1 -s -r -p "Press any key to back on menu"
+			v2ray-menu
 		fi
 	done
 export patchtls=/vless
