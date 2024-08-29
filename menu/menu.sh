@@ -113,6 +113,11 @@ cpu_usage+=" %"
 # TIME ZON
 WKT=$(curl -s ipinfo.io/timezone )
 
+# DETAIL ORDER
+username=$(cat /usr/bin/user)
+oid=$(cat /usr/bin/ver)
+exp=$(cat /usr/bin/e)
+
 clear
 clear && clear && clear
 clear;clear;clear
