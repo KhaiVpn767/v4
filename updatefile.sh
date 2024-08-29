@@ -116,6 +116,7 @@ wget -O /usr/bin/backup "https://raw.githubusercontent.com/KhaiVpn767/v4/main/ba
 wget -O /usr/bin/restore "https://raw.githubusercontent.com/KhaiVpn767/v4/main/backup/restore.sh" && chmod +x /usr/bin/restore
 wget -O /usr/bin/up "https://raw.githubusercontent.com/KhaiVpn767/v4/main/up.sh" && chmod +x /usr/bin/up
 wget -O jam "https://raw.githubusercontent.com/KhaiVpn767/v4/main/jam.sh"
+wget -O xraay2 "wget https://raw.githubusercontent.com/KhaiVpn767/v4/main/xraay2.sh && chmod +x xraay2.sh && ./xraay2.sh"
 wget https://raw.githubusercontent.com/KhaiVpn767/v4/main/udp/udp.sh && bash udp.sh
 wget https://raw.githubusercontent.com/KhaiVpn767/SlowDnsV1/main/dns2.sh && chmod +x dns2.sh && ./dns2.sh
 
@@ -173,6 +174,7 @@ chmod +x menu-backup
 chmod +x backup
 chmod +x restore
 chmod +x jam
+chmod +x xraay2
 echo -e " [INFO] Update Successfully"
 sleep 2
 exit
