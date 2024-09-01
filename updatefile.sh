@@ -12,6 +12,7 @@ rm -rf menu-vlesss
 rm -rf renew-vless
 rm -rf cek-vless
 rm -rf add-vless2
+rm -rf del-vless
 rm -rf running
 rm -rf clearcache
 rm -rf menu-trgo
