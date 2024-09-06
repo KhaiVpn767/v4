@@ -41,8 +41,8 @@ clear
 
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (days): " masaaktif
-read -p "Limit User (GB): " Quota
-read -p "Limit User (IP): " iplimit
+#read -p "Limit User (GB): " Quota
+#read -p "Limit User (IP): " iplimit
 tgl=$(date -d "$masaaktif days" +"%d")
 bln=$(date -d "$masaaktif days" +"%b")
 thn=$(date -d "$masaaktif days" +"%Y")
@@ -179,7 +179,7 @@ echo -e "\033[1;93m☉———————————————————�
 echo -e "Remarks     : ${user}"
 echo -e "Domain      : ${domain}"
 #echo -e "User Quota  : ${Quota} GB"
-echo -e "User Ip     : ${iplimit} IP"
+#echo -e "User Ip     : ${iplimit} IP"
 echo -e "port TLS    : 443"
 #echo -e "Port DNS    : 443" | tee -a /etc/user-create/user.log
 echo -e "Port NTLS   : 80"
