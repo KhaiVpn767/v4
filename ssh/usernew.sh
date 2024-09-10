@@ -143,20 +143,20 @@ echo -e "enter back to menu  "
 else 
 
 echo -e "${cyan}___________________________________${NC}"
-echo -e "           ${red_background}ACCOUNT${NC}" | tee -a /etc/log-create-user.log
-echo -e "${cyan}___________________________________${NC}" | tee -a /etc/log-create-user.log
-echo -e "${cyan}══════════════════════${NC}" | tee -a /etc/log-create-user.log
-echo -e "Username   : $Login" | tee -a /etc/log-create-user.log
-echo -e "Password   : $Pass" | tee -a /etc/log-create-user.log
-echo -e "Expired On : $exp" | tee -a /etc/log-create-user.log
-echo -e "${cyan}══════════════════════${NC}" | tee -a /etc/log-create-user.log
-echo -e "           ${red_background}DETAIL${NC}" | tee -a /etc/log-create-user.log
-echo -e "${cyan}══════════════════════${NC}" | tee -a /etc/log-create-user.log
-echo -e "Host     : $domen" | tee -a /etc/log-create-user.log
-echo -e "NS       : $sldomain" | tee -a /etc/log-create-user.log
-echo -e "${cyan}══════════════════════${NC}" | tee -a /etc/log-create-user.log
-echo -e "PubKey   : $slkey" | tee -a /etc/log-create-user.log
-echo -e "${cyan}══════════════════════${NC}" | tee -a /etc/log-create-user.log
+echo -e "           ${red_background}ACCOUNT${NC}" 
+echo -e "${cyan}___________________________________${NC}"
+echo -e "${cyan}══════════════════════${NC}"
+echo -e "Username   : $Login"
+echo -e "Password   : $Pass"
+echo -e "Expired On : $exp"
+echo -e "${cyan}══════════════════════${NC}"
+echo -e "           ${red_background}DETAIL${NC}"
+echo -e "${cyan}══════════════════════${NC}"
+echo -e "Host     : $domen"
+echo -e "NS       : $sldomain"
+echo -e "${cyan}══════════════════════${NC}"
+echo -e "PubKey   : $slkey"
+echo -e "${cyan}══════════════════════${NC}"
 echo -e "Port ws  : 80" | tee -a /etc/log-create-user.log
 echo -e "ws ssl   : 443" | tee -a /etc/log-create-user.log
 echo -e "SSL only : 447 , 777" | tee -a /etc/log-create-user.log
