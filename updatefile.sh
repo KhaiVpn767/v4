@@ -72,8 +72,9 @@ wget -O trialvless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/tr
 wget -O add-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/add-vless.sh"
 wget -O renew-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/renew-vless.sh"
 wget -O cek-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/cek-vless.sh"
-wget -0 add-vless2 "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/add-vless2.sh"
-wget -0 del-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/del-vless.sh"
+wget -O add-vless2 "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/add-vless2.sh"
+wget -O del-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/del-vless.sh"
+wget -O addvls "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/addvls"
 
 # menu ssh ovpn
 wget -O menu-sshh "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-sshh.sh"
@@ -121,8 +122,7 @@ wget -O jam "https://raw.githubusercontent.com/KhaiVpn767/v4/main/jam.sh"
 wget https://raw.githubusercontent.com/KhaiVpn767/v4/main/udp/udp.sh && bash udp.sh
 #wget https://raw.githubusercontent.com/KhaiVpn767/SlowDnsV1/main/dns2.sh && chmod +x dns2.sh && ./dns2.sh
 
-#install Bot panel
-#wget -O bot "https://raw.githubusercontent.com/KhaiVpn767/v4/main/bot.sh" && chmod +x /usr/bin/bot
+
 
 chmod +x menu
 chmod +x menu-trial
@@ -138,6 +138,7 @@ chmod +x renew-vless
 chmod +x cek-vless
 chmod +x add-vless2
 chmod +x del-vless
+chmod +x addvls
 
 chmod +x menu-sshh
 chmod +x usernew
