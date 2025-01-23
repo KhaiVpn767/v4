@@ -98,7 +98,7 @@ echo -e ""
 read -p " Select =>  "  opt
 echo -e ""
 case $opt in
-1) clear ; add-vless ; exit ;;
+1) clear ; addvless.sh ; exit ;;
 2) clear ; trialvless ; exit ;;
 3) clear ; renew-vless ; exit ;;
 4) clear ; del-vless ; exit ;;
