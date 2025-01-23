@@ -283,6 +283,7 @@ echo -e "Remarks        : ${user}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Aktif Selama   : $masaaktif Hari" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Dibuat Pada    : $tnggl" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Berakhir Pada  : $exp" | tee -a /etc/xray/log-create-${user}.log
+echo -e "ID ANDA        : ${uuid}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "\033[1;93m☉———————————————————☉\033[0m" | tee -a /etc/xray/log-create-${user}.log
 echo ""
 read -p "Enter Back To menu"
