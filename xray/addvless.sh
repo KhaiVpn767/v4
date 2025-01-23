@@ -245,31 +245,37 @@ echo -e "id             : ${uuid}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "network        : ws or grpc" | tee -a /etc/xray/log-create-${user}.log
 echo -e "path           : /vless " | tee -a /etc/xray/log-create-${user}.log
 echo -e "servicename    : vless-grpc" | tee -a /etc/xray/log-create-${user}.log
-echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}☉───────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Link TLS  : ${vlesslink1}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}☉───────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Link NTLS : ${vlesslink2}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}☉───────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Link GRPC : ${vlesslink3}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}☉───────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Link DIGI-APN : ${vlesslink4}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}☉───────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Link DIGI-BOSSTER : ${vlesslink5}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}☉───────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Link Umobile-funz : ${vlesslink6}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}☉───────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Link UMOBILE : ${vlesslink7}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}☉───────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Link YES : ${vlesslink8}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}☉───────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Link SELCOM-0BASIC : ${vlesslink9}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}☉───────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Link UNIFI-Bebas : ${vlesslink10}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}☉──────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Link UNIFI-Uni5G : ${vlesslink11}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}☉───────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Format OpenClash : https://${domain}:81/vless-$user.txt" | tee -a /etc/xray/log-create-${user}.log
-echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "Expired   : $exp" | tee -a /etc/xray/log-create-${user}.log
-echo -e "" | tee -a /etc/xray/log-create-${user}.log
-exit 0
+echo -e "${OR}☉───────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "\033[1;93m☉———————————————————☉\033[0m"
+echo -e "Remarks        : ${user}"
+echo -e "Aktif Selama   : $masaaktif Hari"
+echo -e "Dibuat Pada    : $tnggl"
+echo -e "Berakhir Pada  : $expe"
+echo -e "\033[1;93m☉———————————————————☉\033[0m"
+echo ""
+read -p "Enter Back To menu"
+menu-vless
