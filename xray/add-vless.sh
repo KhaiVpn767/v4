@@ -177,53 +177,29 @@ systemctl restart xray
 systemctl restart nginx
 clear
 echo -e ""
-echo -e "\033[1;93m☉————————————————————————☉\033[0m"
-echo -e "🧿Status Create VLESS Succes🧿           "
-echo -e "\033[1;93m☉————————————————————————☉\033[0m"
-echo -e "Remarks     : ${user}"
-echo -e "Domain      : ${domain}"
-#echo -e "User Quota  : ${Quota} GB"
-echo -e "User Ip     : ${iplimit} IP"
-echo -e "port TLS    : 443"
-#echo -e "Port DNS    : 443" | tee -a /etc/user-create/user.log
-echo -e "Port NTLS   : 80"
-echo -e "User ID     : ${uuid}"
-#echo -e "Xray Dns.   : ${NS}" | tee -a /etc/user-create/user.log
-#echo -e "Pubkey.     : ${PUB}" | tee -a /etc/user-create/user.log
-echo -e "Encryption  : none"
-#echo -e "Path TLS    : /vless/multi-path "
-echo -e "ServiceName : vless-grpc"
-echo -e "\033[1;93m☉————————————————————————☉\033[0m"
-echo -e "Link TLS    : ${vlesslink1}"
-echo -e "\033[1;93m☉————————————————————————☉\033[0m"
-echo -e "Link NTLS   : ${vlesslink2}"
-echo -e "\033[1;93m☉————————————————————————☉\033[0m"
-echo -e "Link GRPC   : ${vlesslink3}"
-echo -e "\033[1;93m☉————————————————————————☉\033[0m"
-echo -e "Link DIGI-APN    : ${vlesslink4}"
-echo -e "\033[1;93m☉————————————————————————☉\033[0m"
-echo -e "Link DIGI-BOSSTER: ${vlesslink5}"
-echo -e "\033[1;93m☉————————————————————————☉\033[0m"
-echo -e "Link Umobile-funz: ${vlesslink6}"
-echo -e "\033[1;93m☉————————————————————————☉\033[0m"
-echo -e "Link Umobile     : ${vlesslink7}"
-echo -e "\033[1;93m☉————————————————————————☉\033[0m"
-echo -e "Link YES.        : ${vlesslink8}"
-echo -e "\033[1;93m☉————————————————————————☉\033[0m"
-echo -e "Link SELCOM-0BASIC: ${vlesslink9}"
-echo -e "\033[1;93m☉————————————————————————☉\033[0m"
-echo -e "Link UNIFI-Bebas. : ${vlesslink10}"
-echo -e "\033[1;93m☉————————————————————————☉\033[0m"
-echo -e "Link UNIFI-Uni5G. : ${vlesslink11}"
-echo -e "\033[1;93m☉————————————————————————☉\033[0m"
-echo -e "Format OpenClash : https://${domain}:81/vless-$user.txt"
-echo -e "\033[1;93m☉————————————————————————☉\033[0m"
-echo -e "\033[1;93m☉———————————————————☉\033[0m"
-echo -e "Remarks        : ${user}"
-echo -e "Aktif Selama   : $masaaktif Hari"
-echo -e "Dibuat Pada    : $tnggl"
-echo -e "Berakhir Pada  : $expe"
-echo -e "\033[1;93m☉———————————————————☉\033[0m"
-echo ""
-read -p "Enter Back To menu"
-menu-vless
+clear -x
+echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "\e[92;1m    Xray/Vless Account    \E[0m" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Remarks        : ${user}" | tee -a /etc/xray/log-create-${user}.log
+#echo -e "CITY           : ${CITY}" | tee -a /etc/xray/log-create-${user}.log
+#echo -e "ISP            : ${ISP}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Domain         : ${domain}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Port TLS       : 443" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Port none TLS  : 80, 8080" | tee -a /etc/xray/log-create-${user}.log
+echo -e "id             : ${uuid}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "network        : ws or grpc" | tee -a /etc/xray/log-create-${user}.log
+echo -e "path           : /vless " | tee -a /etc/xray/log-create-${user}.log
+echo -e "servicename    : vless-grpc" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Link TLS  : ${vlesslink1}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Link NTLS : ${vlesslink2}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Link GRPC : ${vlesslink3}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Format OpenClash : https://${domain}:81/vless-$user.txt" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Expired   : $exp" | tee -a /etc/xray/log-create-${user}.log
+echo -e "" | tee -a /etc/xray/log-create-${user}.log
+exit 0
