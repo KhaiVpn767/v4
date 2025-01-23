@@ -270,12 +270,12 @@ echo -e "Link UNIFI-Uni5G : ${vlesslink11}" | tee -a /etc/xray/log-create-${user
 echo -e "${OR}☉───────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Format OpenClash : https://${domain}:81/vless-$user.txt" | tee -a /etc/xray/log-create-${user}.log
 echo -e "${OR}☉───────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "\033[1;93m☉———————————————————☉\033[0m"
-echo -e "Remarks        : ${user}"
-echo -e "Aktif Selama   : $masaaktif Hari"
-echo -e "Dibuat Pada    : $tnggl"
-echo -e "Berakhir Pada  : $expe"
-echo -e "\033[1;93m☉———————————————————☉\033[0m"
+echo -e "\033[1;93m☉———————————————————☉\033[0m" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Remarks        : ${user}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Aktif Selama   : $masaaktif Hari" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Dibuat Pada    : $tnggl" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Berakhir Pada  : $expe" | tee -a /etc/xray/log-create-${user}.log
+echo -e "\033[1;93m☉———————————————————☉\033[0m" | tee -a /etc/xray/log-create-${user}.log
 echo ""
 read -p "Enter Back To menu"
 menu-vless
