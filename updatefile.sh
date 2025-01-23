@@ -11,7 +11,7 @@ rm -rf menu-vmess
 rm -rf menu-vlesss
 rm -rf renew-vless
 rm -rf cek-vless
-rm -rf add-vless2
+rm -rf addvless
 rm -rf del-vless
 rm -rf running
 rm -rf clearcache
