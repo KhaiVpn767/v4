@@ -132,7 +132,7 @@ chmod +x clearcache
 chmod +x menu-trgo
 chmod +x menu-trojan
 chmod +x trialvless
-chmod +x addvless.sh
+chmod +x addvless
 chmod +x renew-vless
 chmod +x cek-vless
 chmod +x del-vless
