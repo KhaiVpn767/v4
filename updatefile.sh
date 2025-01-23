@@ -69,7 +69,7 @@ wget -O clearcache "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/cl
 wget -O menu-trgo "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-trgo.sh"
 wget -O menu-trojan "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-trojan.sh"
 wget -O trialvless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/trialvless.sh"
-wget -O addvless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/addvless.sh"
+wget -O add-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/add-vless.sh"
 wget -O renew-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/renew-vless.sh"
 wget -O cek-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/cek-vless.sh"
 wget -O del-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/del-vless.sh"
@@ -133,6 +133,7 @@ chmod +x menu-trgo
 chmod +x menu-trojan
 chmod +x trialvless
 chmod +x addvless
+chmod +x add-vless
 chmod +x renew-vless
 chmod +x cek-vless
 chmod +x del-vless
