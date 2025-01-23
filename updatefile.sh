@@ -74,7 +74,7 @@ wget -O renew-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/r
 wget -O cek-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/cek-vless.sh"
 wget -O del-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/del-vless.sh"
 wget -O addvls "https://raw.githubusercontent.com/KhaiVpn767/v4/refs/heads/main/xray/addvls.sh"
-wget -O addvls "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/addvless.sh"
+wget -O addvless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/addvless.sh"
 
 # menu ssh ovpn
 wget -O menu-sshh "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-sshh.sh"
@@ -88,7 +88,6 @@ wget -O delete "https://raw.githubusercontent.com/KhaiVpn767/v4/main/ssh/delete.
 wget -O autokilll "https://raw.githubusercontent.com/KhaiVpn767/v4/main/ssh/autokilll.sh"
 wget -O ceklim "https://raw.githubusercontent.com/KhaiVpn767/v4/main/ssh/ceklim.sh"
 wget -O tendang "https://raw.githubusercontent.com/KhaiVpn767/v4/main/ssh/tendang.sh"
-wget -O addvls "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/addvless.sh"
 
 # menu system
 wget -O menu-set "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-set.sh"
@@ -140,6 +139,7 @@ chmod +x renew-vless
 chmod +x cek-vless
 chmod +x del-vless
 chmod +x addvls.sh
+chmod +x addvless.sh
 
 chmod +x menu-sshh
 chmod +x usernew
