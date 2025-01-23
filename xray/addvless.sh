@@ -63,7 +63,7 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 done
 
 uuid=$(cat /proc/sys/kernel/random/uuid)
-sec=3
+sec=2
 echo ""
 spinner=(⣻ ⢿ ⡿ ⣟ ⣯ ⣷)
 while [ $sec -gt 0 ]; do
