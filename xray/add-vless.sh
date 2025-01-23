@@ -60,6 +60,7 @@ vlesslink3="vless://${uuid}@${domain}:443?mode=gun&security=tls&encryption=none&
 vlesslink4="vless://${uuid}@api.useinsider.com:80?path=/vless&encryption=none&host=${sts}${domain}&type=ws#DIGI-APN-${user}"
 vlesslink5="vless://${uuid}@162.159.134.61:80?path=/vless&encryption=none&host=${sts}${domain}&type=ws#DIGI-BOSSTER-${user}"
 vlesslink6="vless://${uuid}@${domain}:80?path=/vless&encryption=none&host=m.pubgmobile.com&type=ws#UMOBILE-FUNZ-${user}"
+vlesslink4="vless://${uuid}@104.18.8.53:80?path=/vless&encryption=none&host=${sts}${domain}&type=ws#UMOBILE-${user}"
 vlesslink7="vless://${uuid}@104.17.113.188:80?path=/vless&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#YES-${user}"
 vlesslink8="vless://${uuid}@104.17.148.22:80?path=/vless&encryption=none&host=www.speedtest.net.${domain}&type=ws#SELCOM-0BASIC-${user}"
 vlesslink9="vless://${uuid}@104.17.10.12:80?path=/vless&encryption=none&host=cdn.who.int.${domain}&type=ws#UNIFI-Bebas-${user}"
@@ -165,6 +166,9 @@ ${vlesslink9}
 Link none TLS : 
 ${vlesslink10}
 ◇━━━━━━━━━━━━━━━━━◇
+Link none TLS : 
+${vlesslink11}
+◇━━━━━━━━━━━━━━━━━◇
 
 
 END
@@ -202,13 +206,15 @@ echo -e "Link DIGI-BOSSTER: ${vlesslink5}"
 echo -e "\033[1;93m☉————————————————————————☉\033[0m"
 echo -e "Link Umobile-funz: ${vlesslink6}"
 echo -e "\033[1;93m☉————————————————————————☉\033[0m"
-echo -e "Link YES.        : ${vlesslink7}"
+echo -e "Link Umobile     : ${vlesslink7}"
 echo -e "\033[1;93m☉————————————————————————☉\033[0m"
-echo -e "Link SELCOM-0BASIC: ${vlesslink8}"
+echo -e "Link YES.        : ${vlesslink8}"
 echo -e "\033[1;93m☉————————————————————————☉\033[0m"
-echo -e "Link UNIFI-Bebas. : ${vlesslink9}"
+echo -e "Link SELCOM-0BASIC: ${vlesslink9}"
 echo -e "\033[1;93m☉————————————————————————☉\033[0m"
-echo -e "Link UNIFI-Uni5G. : ${vlesslink10}"
+echo -e "Link UNIFI-Bebas. : ${vlesslink10}"
+echo -e "\033[1;93m☉————————————————————————☉\033[0m"
+echo -e "Link UNIFI-Uni5G. : ${vlesslink11}"
 echo -e "\033[1;93m☉————————————————————————☉\033[0m"
 echo -e "Format OpenClash : https://${domain}:81/vless-$user.txt"
 echo -e "\033[1;93m☉————————————————————————☉\033[0m"
