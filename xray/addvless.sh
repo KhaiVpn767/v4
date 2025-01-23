@@ -90,6 +90,14 @@ until [[ $iplimit =~ ^[0-9]+$ ]]; do
   mkdir -p /etc/kyt/limit/vless/ip
   read -p "   Limit User (IP): " iplimit
 done
+tgl=$(date -d "$masaaktif days" +"%d")
+bln=$(date -d "$masaaktif days" +"%b")
+thn=$(date -d "$masaaktif days" +"%Y")
+expe="$tgl $bln, $thn"
+tgl2=$(date +"%d")
+bln2=$(date +"%b")
+thn2=$(date +"%Y")
+tnggl="$tgl2 $bln2, $thn2"
 exp=$(date -d "$masaaktif days" +"%Y-%m-%d")
 sed -i '/#vless$/a\#& '"$user $exp"'\
 },{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/config.json
@@ -274,7 +282,7 @@ echo -e "\033[1;93m☉———————————————————�
 echo -e "Remarks        : ${user}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Aktif Selama   : $masaaktif Hari" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Dibuat Pada    : $tnggl" | tee -a /etc/xray/log-create-${user}.log
-echo -e "Berakhir Pada  : $expe" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Berakhir Pada  : $exp" | tee -a /etc/xray/log-create-${user}.log
 echo -e "\033[1;93m☉———————————————————☉\033[0m" | tee -a /etc/xray/log-create-${user}.log
 echo ""
 read -p "Enter Back To menu"
