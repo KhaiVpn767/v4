@@ -166,12 +166,41 @@ ${vlesslink2}
 Link GRPC     : 
 ${vlesslink3}
 ---------------------
+Link none TLS : 
+${vlesslink4}
+◇━━━━━━━━━━━━━━━━━◇
+Link none TLS : 
+${vlesslink5}
+◇━━━━━━━━━━━━━━━━━◇
+Link none TLS : 
+${vlesslink6}
+◇━━━━━━━━━━━━━━━━━◇
+Link none TLS : 
+${vlesslink7}
+◇━━━━━━━━━━━━━━━━━◇
+Link none TLS : 
+${vlesslink8}
+◇━━━━━━━━━━━━━━━━━◇
+Link none TLS : 
+${vlesslink9}
+◇━━━━━━━━━━━━━━━━━◇
+Link none TLS : 
+${vlesslink10}
+◇━━━━━━━━━━━━━━━━━◇
 
 END
 
-vlesslink1="vless://${uuid}@${domain}:443?path=/whatever/vless&security=tls&encryption=none&type=ws#${user}-WS-(CDN)-TLS"
-vlesslink2="vless://${uuid}@${domain}:80?path=/whatever/vless&encryption=none&type=ws#${user}-WS-(CDN)-NTLS"
+vlesslink1="vless://${uuid}@${domain}:443?path=/whatever/vless&security=tls&encryption=none&type=ws#${user}"
+vlesslink2="vless://${uuid}@${domain}:80?path=/whatever/vless&encryption=none&type=ws#${user}"
 vlesslink3="vless://${uuid}@${domain}:443?mode=gun&security=tls&encryption=none&type=grpc&serviceName=vless-grpc&sni=${domain}#${user}-(SNI)-GRPC"
+vlesslink4="vless://${uuid}@api.useinsider.com:80?path=/vless&encryption=none&host=${sts}${domain}&type=ws#DIGI-APN-${user}"
+vlesslink5="vless://${uuid}@162.159.134.61:80?path=/vless&encryption=none&host=${sts}${domain}&type=ws#DIGI-BOSSTER-${user}"
+vlesslink6="vless://${uuid}@${domain}:80?path=/vless&encryption=none&host=m.pubgmobile.com&type=ws#UMOBILE-FUNZ-${user}"
+vlesslink7="vless://${uuid}@104.17.113.188:80?path=/vless&encryption=none&host=${domain}&type=ws#UMOBILE-${user}"
+vlesslink8="vless://${uuid}@104.17.113.188:80?path=/vless&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#YES-${user}"
+vlesslink9="vless://${uuid}@104.17.148.22:80?path=/vless&encryption=none&host=www.speedtest.net.${domain}&type=ws#SELCOM-0BASIC-${user}"
+vlesslink10="vless://${uuid}@104.17.10.12:80?path=/vless&encryption=none&host=cdn.who.int.${domain}&type=ws#UNIFI-Bebas-${user}"
+vlesslink11="vless://${uuid}@speedtest.unifi.com.my.${domain}:80?path=/vless&encryption=none&host=&type=ws#Uni5G-${user}"
 systemctl restart xray
 if [ ! -e /etc/vless ]; then
   mkdir -p /etc/vless
@@ -214,6 +243,22 @@ echo -e "${OR}──────────────────────
 echo -e "Link NTLS : ${vlesslink2}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Link GRPC : ${vlesslink3}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Link DIGI-APN : ${vlesslink4}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Link DIGI-BOSSTER : ${vlesslink5}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Link Umobile-funz : ${vlesslink6}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Link UMOBILE : ${vlesslink7}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Link YES : ${vlesslink8}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Link SELCOM-0BASIC : ${vlesslink9}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Link UNIFI-Bebas : ${vlesslink10}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "Link UNIFI-Uni5G : ${vlesslink11}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Format OpenClash : https://${domain}:81/vless-$user.txt" | tee -a /etc/xray/log-create-${user}.log
 echo -e "${OR}───────────────────────────${NC}" | tee -a /etc/xray/log-create-${user}.log
