@@ -280,7 +280,11 @@ wget -O clearcache "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/cl
 wget -O menu-trgo "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-trgo.sh"
 wget -O menu-trojan "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-trojan.sh"
 wget -O trialvless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/trialvless.sh"
-wget -O add-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/add-vless.sh"
+wget -O renew-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/renew-vless.sh"
+wget -O cek-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/cek-vless.sh"
+wget -O del-vless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/del-vless.sh"
+wget -O addvls "https://raw.githubusercontent.com/KhaiVpn767/v4/refs/heads/main/xray/addvls.sh"
+wget -O addvless "https://raw.githubusercontent.com/KhaiVpn767/v4/main/xray/addvless.sh"
 
 # menu ssh ovpn
 wget -O menu-sshh "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-sshh.sh"
@@ -294,8 +298,6 @@ wget -O delete "https://raw.githubusercontent.com/KhaiVpn767/v4/main/ssh/delete.
 wget -O autokilll "https://raw.githubusercontent.com/KhaiVpn767/v4/main/ssh/autokilll.sh"
 wget -O ceklim "https://raw.githubusercontent.com/KhaiVpn767/v4/main/ssh/ceklim.sh"
 wget -O tendang "https://raw.githubusercontent.com/KhaiVpn767/v4/main/ssh/tendang.sh"
-wget -O user-lock "https://raw.githubusercontent.com/KhaiVpn767/v4/main/ssh/user-lock.sh"
-wget -O user-unlock "https://raw.githubusercontent.com/KhaiVpn767/v4/main/ssh/user-unlock.sh"
 
 # menu system
 wget -O menu-set "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/menu-set.sh"
@@ -309,6 +311,8 @@ wget -O about "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/about.s
 wget -O auto-reboot "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/auto-reboot.sh"
 wget -O restarts "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/restarts.sh"
 wget -O bw "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/bw.sh"
+wget -O m-helium "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/m-helium.sh"
+wget -O autobackup "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/autobackup"
 
 
 # change port
@@ -334,15 +338,15 @@ chmod +x menu-trial
 chmod +x menu-vmess
 chmod +x menu-vless
 chmod +x running
-chmod +x about
 chmod +x clearcache
 chmod +x menu-trgo
 chmod +x menu-trojan
 chmod +x trialvless
-chmod +x add-vless
-chmod +x user-lock
-chmod +x user-unlock
-chmod +x bot
+chmod +x addvless
+chmod +x renew-vless
+chmod +x cek-vless
+chmod +x del-vless
+chmod +x addvls
 
 chmod +x menu-sshh
 chmod +x usernew
@@ -367,6 +371,11 @@ chmod +x about
 chmod +x auto-reboot
 chmod +x restarts
 chmod +x bw
+chmod +x m-helium
+chmod +x autobackup
+
+chmod +x port-ssl
+chmod +x port-ovpn
 
 chmod +x port-ssl
 chmod +x port-ovpn
