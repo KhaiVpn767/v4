@@ -120,7 +120,6 @@ wget -O bot "https://raw.githubusercontent.com/KhaiVpn767/v4/main/bot.sh"
 wget -O jam "https://raw.githubusercontent.com/KhaiVpn767/v4/main/jam.sh"
 
 chmod +x menu
-chmod +x menu-trial
 chmod +x menu-vmess
 chmod +x menu-vless
 chmod +x running
