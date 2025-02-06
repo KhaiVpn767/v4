@@ -36,7 +36,7 @@ case $opt in
 5) clear ; bw ; exit ;;
 6) clear ; auto-reboot ; exit ;;
 7) clear ; speedtest ; exit ;;
-8) clear ; wget https://raw.githubusercontent.com/KhaiVpn767/MultiportV2/main/system/autobackup && chmod +x autobackup && ./autobackup ;;
+8) clear ; autobackup ;;
 9) clear ; wget https://raw.githubusercontent.com/KhaiVpn767/SlowDnsV1/main/dns2.sh && chmod +x dns2.sh && ./dns2.sh ;;
 10) clear ; m-helium;;
 0) clear ; menu ; exit ;;
