@@ -38,7 +38,7 @@ case $opt in
 7) clear ; speedtest ; exit ;;
 8) clear ; wget https://raw.githubusercontent.com/KhaiVpn767/MultiportV2/main/system/autobackup && chmod +x autobackup && ./autobackup ;;
 9) clear ; wget https://raw.githubusercontent.com/KhaiVpn767/SlowDnsV1/main/dns2.sh && chmod +x dns2.sh && ./dns2.sh ;;
-10) clear ; wget https://raw.githubusercontent.com/KhaiVpn767/V5/refs/heads/main/menu/m-helium.sh && chmod +x m-helium.sh && ./m-helium.sh ;;
+10) clear ; m-helium;;
 0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo -e "" ; echo "salah tekan" ; sleep 1 ; menu-set ;;
