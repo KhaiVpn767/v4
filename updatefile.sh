@@ -101,6 +101,7 @@ wget -O about "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/about.s
 wget -O auto-reboot "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/auto-reboot.sh"
 wget -O restarts "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/restarts.sh"
 wget -O bw "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/bw.sh"
+wget -O m-helium "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/m-helium.sh"
 
 # change port
 wget -O port-ssl "https://raw.githubusercontent.com/KhaiVpn767/v4/main/port/port-ssl.sh"
@@ -164,6 +165,7 @@ chmod +x about
 chmod +x auto-reboot
 chmod +x restarts
 chmod +x bw
+chmod +x m-helium
 
 chmod +x port-ssl
 chmod +x port-ovpn
