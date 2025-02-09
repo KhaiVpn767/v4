@@ -250,7 +250,7 @@ echo -e "${BIYellow} ┌──────────────────�
 echo -e "${BIYellow} │ Version      ${NC} : ${BIPurple} Ver4. Last Update"
 echo -e "${BIYellow} │ User       ${NC}   : ${BIWhite} $Name"
 echo -e "${BIYellow} │ Expiry script${NC} : ${BIYellow} $useexp"
-e-e cho "${BIYellow} └─────────────────────────────────────┘"
+echo -e "${BIYellow} └─────────────────────────────────────┘"
 echo -e "
 echo -e "
 read -p " Select menu : " opt
