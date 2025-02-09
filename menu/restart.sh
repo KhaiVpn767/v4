@@ -1,251 +1,120 @@
 #!/bin/bash
-MYIP=$(wget -qO- ipinfo.io/ip);
-#
-green_background="\033[42;37m"
-NC="\033[0m" # PENUTUP WARNA
-red_background="\033[41;37m"
-# color validation 
-wh="\e[1;37m" # PUTIH
-ye="\e[1;33m" # KUNING
-cy="\e[1;36m" # CYAN/BIRU MUDA
-clear 
-echo -e "  ${red_background}RESTART MENU${NC}"
-echo -e ""
-echo -e "        ${wh}•1)${NC} ${cy}Restart All Services${NC}"
-echo -e "        ${wh}•2)${NC} ${cy}Restart OpenSSH${NC}"
-echo -e "        ${wh}•3)${NC} ${cy}Restart Dropbear${NC}"
-echo -e "        ${wh}•4)${NC} ${cy}Restart Stunnel4${NC}"
-echo -e "        ${wh}•5)${NC} ${cy}Restart OpenVPN${NC}"
-echo -e "        ${wh}•6)${NC} ${cy}Restart Squid${NC}"
-echo -e "        ${wh}•7)${NC} ${cy}Restart Nginx${NC}"
-echo -e "        ${wh}•8)${NC} ${cy}Restart Badvpn${NC}"
-echo -e "        ${wh}•9)${NC} ${cy}Restart Xray${NC}"
-echo -e "        ${wh}10)${NC} ${cy}Restart Websocket${NC}"
-echo -e "        ${wh}11)${NC} ${cy}Restart Trojan Go${NC}"
-echo -e "        ${ye}•0)${NC} ${ye}Back To Menu${NC}"
-echo -e "${ye}"
-read -p " >>>   " Restart
-echo -e ""
+NC='\033[0m'
+yell='\e[33m'
 clear
-case $Restart in
-                1)
-                clear
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[40;1;37m         • RESTART MENU •          \E[0m"
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e ""
-                echo -e "[ \033[1;32mInfo\033[0m ] Restart Begin"
-                echo -e "loading......" | lolcat
-                sleep 2
-                /etc/init.d/ssh restart
-                /etc/init.d/dropbear restart
-                /etc/init.d/stunnel4 restart
-                /etc/init.d/fail2ban restart
-                /etc/init.d/cron restart
-                /etc/init.d/nginx restart
-                /etc/init.d/squid restart
-                echo -e "[ \033[1;36mOK\033[0m ] Restarting xray (via systemctl) "
-                systemctl restart xray
-                systemctl restart xray.service
-                echo -e "[ \033[1;36mOK\033[0m ] Restarting badvpn (via systemctl) "
-                screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
-                echo -e "[ \033[1;36mOK\033[0m ] Restart Websocket (via systemctl) "
-                systemctl restart ws-dropbear.service
-                systemctl restart ws-stunnel.service
-                echo -e "[ \033[1;36mOK\033[0m ] Restart Trojan Go (via systemctl) "
-                systemctl restart trojan-go.service 
-                echo -e "[ \033[1;32mSUCCES\033[0m ] \e[1;36mRestarted All Service\033[0m"
-                echo ""
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo ""
-                read -n 1 -s -r -p "Press any key to back on system menu"
-                restarts
-                ;;
-                2)
-                clear
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[40;1;37m         • RESTART MENU •          \E[0m"
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e ""
-                echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
-                sleep 1
-                /etc/init.d/ssh restart
-                sleep 0.5
-                echo -e "[ \033[32mInfo\033[0m ] SSH Service Restarted"
-                echo ""
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo ""
-                read -n 1 -s -r -p "Press any key to back on system menu"
-                restarts
-                ;;
-                3)
-                clear
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[40;1;37m         • RESTART MENU •          \E[0m"
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e ""
-                echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
-                sleep 1
-                /etc/init.d/dropbear restart
-                sleep 0.5
-                echo -e "[ \033[32mInfo\033[0m ] Dropbear Service Restarted"
-                echo ""
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo ""
-                read -n 1 -s -r -p "Press any key to back on system menu"
-                restarts
-                ;;
-                4)
-                clear
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[40;1;37m         • RESTART MENU •          \E[0m"
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e ""
-                echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
-                sleep 1
-                /etc/init.d/stunnel4 restart
-                sleep 0.5
-                echo -e "[ \033[32mInfo\033[0m ] Stunnel4 Service Restarted"
-                echo ""
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo ""
-                read -n 1 -s -r -p "Press any key to back on system menu"
-                restarts
-                ;;
-                5)
-                clear
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[40;1;37m         • RESTART MENU •          \E[0m"
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e ""
-                echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
-                sleep 1
-                /etc/init.d/openvpn restart
-                sleep 0.5
-                echo -e "[ \033[32mInfo\033[0m ] Openvpn Service Restarted"
-                echo ""
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo ""
-                read -n 1 -s -r -p "Press any key to back on system menu"
-                restarts
-                ;;
-                6)
-                clear
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[40;1;37m         • RESTART MENU •          \E[0m"
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e ""
-                echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
-                sleep 1
-                /etc/init.d/squid restart
-                sleep 0.5
-                echo -e "[ \033[32mInfo\033[0m ] Squid Service Restarted"
-                echo ""
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo ""
-                read -n 1 -s -r -p "Press any key to back on system menu"
-                restarts
-                ;;
-                7)
-                clear
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[40;1;37m         • RESTART MENU •          \E[0m"
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e ""
-                echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
-                sleep 1
-                /etc/init.d/nginx restart
-                sleep 0.5
-                echo -e "[ \033[32mInfo\033[0m ] Nginx Service Restarted"
-                echo ""
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo ""
-                read -n 1 -s -r -p "Press any key to back on system menu"
-                restarts
-                ;;
-                8)
-                clear
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[40;1;37m         • RESTART MENU •          \E[0m"
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e ""
-                echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
-                sleep 1
-                echo -e "[ \033[32mok\033[0m ] Restarting badvpn Service (via systemctl) "
-                screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
-                sleep 0.5
-                echo -e "[ \033[32mInfo\033[0m ] Badvpn Service Restarted"
-                echo ""
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo ""
-                read -n 1 -s -r -p "Press any key to back on system menu"
-                restarts
-                ;;
-                9)
-                clear
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[40;1;37m         • RESTART MENU •          \E[0m"
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e ""
-                echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
-                sleep 1
-                echo -e "[ \033[32mok\033[0m ] Restarting xray Service (via systemctl) "
-                systemctl restart xray
-                systemctl restart xray.service
-                sleep 0.5
-                echo -e "[ \033[32mInfo\033[0m ] XRAY Service Restarted"
-                echo ""
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo ""
-                read -n 1 -s -r -p "Press any key to back on system menu"
-                restarts
-                ;;
-                10)
-                clear
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[40;1;37m         • RESTART MENU •          \E[0m"
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e ""
-                echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
-                sleep 1
-                echo -e "[ \033[32mok\033[0m ] Restarting websocket Service (via systemctl) "
-                sleep 0.5
-                systemctl restart ws-dropbear.service
-                systemctl restart ws-stunnel.service
-                sleep 0.5
-                echo -e "[ \033[32mInfo\033[0m ] WEBSOCKET Service Restarted"
-                echo ""
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo ""
-                read -n 1 -s -r -p "Press any key to back on system menu"
-                restarts
-                ;;
-                11)
-                clear
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e "\E[40;1;37m         • RESTART MENU •          \E[0m"
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo -e ""
-                echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
-                sleep 1
-                echo -e "[ \033[32mok\033[0m ] Restarting Trojan Go Service (via systemctl) "
-                sleep 0.5
-                systemctl restart trojan-go.service
-                sleep 0.5
-                echo -e "[ \033[32mInfo\033[0m ] Trojan Go Service Restarted"
-                echo ""
-                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-                echo ""
-                read -n 1 -s -r -p "Pencet enter Kembali Ke Menu"
-                restarts
-                ;;                                                                         
-                0)
-                menu
-                exit
-                ;;
-                x)
-                clear
-                exit
-                ;;
-                *) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; restart ;;               
-        esac
+fun_bar() {
+    CMD[0]="$1"
+    CMD[1]="$2"
+    (
+        [[ -e $HOME/fim ]] && rm $HOME/fim
+        ${CMD[0]} -y >/dev/null 2>&1
+        ${CMD[1]} -y >/dev/null 2>&1
+        touch $HOME/fim
+    ) >/dev/null 2>&1 &
+    tput civis
+    echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
+    while true; do
+        for ((i = 0; i < 18; i++)); do
+            echo -ne "\033[0;32m="
+            sleep 0.1s
+        done
+        [[ -e $HOME/fim ]] && rm $HOME/fim && break
+        echo -e "\033[0;33m]"
+        sleep 1s
+        tput cuu1
+        tput dl1
+        echo -ne "  \033[0;33mPlease Wait Loading \033[1;37m- \033[0;33m["
+    done
+    echo -e "\033[0;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
+    tput cnorm
+}
+res1() {
+    systemctl daemon-reload
+}
+res2() {
+    systemctl restart nginx
+}
+res3() {
+    systemctl restart xray
+}
+res4() {
+    systemctl restart fail2ban
+}
+res5() {
+    systemctl restart ssh
+}
+res6() {
+    systemctl restart rc-local
+}
+res7() {
+    systemctl restart dropbear
+}
+res8() {
+    systemctl restart ws
+}
+res9() {
+    systemctl restart openvpn
+}
+res10() {
+    systemctl restart cron
+}
+res11() {
+    systemctl restart haproxy
+}
+res12() {
+    systemctl restart netfilter-persistent
+}
+res13() {
+    systemctl restart squid
+}
+res14() {
+    systemctl disable udp-mini-1
+    systemctl stop udp-mini-1
+    systemctl enable udp-mini-1
+    systemctl start udp-mini-1
+    systemctl disable udp-mini-2
+    systemctl stop udp-mini-2
+    systemctl enable udp-mini-2
+    systemctl start udp-mini-2
+    systemctl disable udp-mini-3
+    systemctl stop udp-mini-3
+    systemctl enable udp-mini-3
+    systemctl start udp-mini-3
+}
+netfilter-persistent
+clear
+echo -e "${yell}┌──────────────────────────────────────────┐${NC}"
+echo -e "${yell}│$NC           RESTART ALL SERVICE           $NC"
+echo -e "${yell}└──────────────────────────────────────────┘${NC}"
+echo -e ""
+echo -e "  \033[1;91m service daemon-reload\033[1;37m"
+fun_bar 'res1'
+echo -e "  \033[1;91m service restart nginx\033[1;37m"
+fun_bar 'res2'
+echo -e "  \033[1;91m service restart xray\033[1;37m"
+fun_bar 'res3'
+echo -e "  \033[1;91m service restart fail2ban\033[1;37m"
+fun_bar 'res4'
+echo -e "  \033[1;91m service restart rc-local\033[1;37m"
+fun_bar 'res5'
+echo -e "  \033[1;91m service restart ssh\033[1;37m"
+fun_bar 'res6'
+echo -e "  \033[1;91m service restart dropbear\033[1;37m"
+fun_bar 'res7'
+echo -e "  \033[1;91m service restart websocket\033[1;37m"
+fun_bar 'res8'
+echo -e "  \033[1;91m service restart openvpn\033[1;37m"
+fun_bar 'res9'
+echo -e "  \033[1;91m service restart cron\033[1;37m"
+fun_bar 'res10'
+echo -e "  \033[1;91m service restart haproxy\033[1;37m"
+fun_bar 'res11'
+echo -e "  \033[1;91m service restart netfilter-persistent\033[1;37m"
+fun_bar 'res12'
+echo -e "  \033[1;91m service restart squid\033[1;37m"
+fun_bar 'res13'
+echo -e "  \033[1;91m service restart badvpn\033[1;37m"
+fun_bar 'res14'
+echo -e ""
+sleep 2
+menu
