@@ -240,7 +240,7 @@ echo -e "${BIRed} │${NC}${BIYellow} [•5]${NC}📨 ${BIWhite} TROJAN-WS${NC} 
 echo -e "${BIRed} │${NC}${BIYellow} [•6]${NC}📨 ${BIWhite} MENU SETINGS${NC}    " "${BIYellow}[12]${NC}📨 ${BIWhite} check port${NC} "
 echo -e "${BIRed} └─────────────────────────────────────────────────────┘"
 echo -e "${BIRed} ┌─────────────────────────────────────────────────────┐"
-echo -e "${BIRed} │ \033[0m ${BOLD}${GREEN}XXX${BIYellow} SSH${GREEN}  XXX  ${BIYellow}VMESS  ${GREEN}XXX  ${BIYellow}VLESS  ${GREEN}XXX  ${BIYellow}TROJAN${GREEN} XXX ${NC} "
+echo -e "${BIRed} │ \033[0m ${BOLD}${BIPurple}XXX${BIYellow} SSH${BIPurple}  XXX  ${BIYellow}VMESS  ${BIPurple}XXX  ${BIYellow}VLESS  ${BIPurple}XXX  ${BIYellow}TROJAN${BIPurple} XXX ${NC} "
 echo -e "${BIRed} │ \033[0m ${Blue}     $ssh1          $vma           $vla            $tra              "
 echo -e "${BIRed} └─────────────────────────────────────────────────────┘"
 echo -e "${BIRed} ┌─────────────────────────────────────────────────────┐"
