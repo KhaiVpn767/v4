@@ -220,10 +220,6 @@ botbckpBot_menu() {
         ;;
     4)
         clear
-        restoreLink
-        ;;
-    5)
-        clear
         restoreBot
         ;;
     x)
