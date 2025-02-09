@@ -262,7 +262,7 @@ case $opt in
 5) clear ; menu-trojan ;;
 6) clear ; menu-set ;;
 7) clear ; status ;;
-8) clear ; restarts ;;
+8) clear ; restart ;;
 9) clear ; menu-backup ;;
 10) clear ; clearcache ;;
 11) clear ; updatefile ;;
