@@ -217,42 +217,42 @@ echo -e ""
 echo -e ""
 echo -e "               ${BIPurple}Premium Script : ${BIPurple}khaiVPN${NC}"
 echo -e "              ${BIPurple} SCRIPT MULTI V4.0 STABILE " | lolcat
-echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
+echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐"
 echo -e "${BIYellow} │                     Informations                    |"
-echo -e "${BIYellow} │=====================================================|" | lolcat
+echo -e "${BIYellow} │=====================================================|"
 echo -e "${BIYellow} | ${BIWhite}Time Zone       :  $WKT${NC}"
 echo -e " ${BIYellow}│ ${BIWhite}Use Core        :  ${BIWhite}XRAY${NC}"
 echo -e "${BIYellow} | ${BIWhite}CPU Usage       :  $cpu_usage${NC}"
 echo -e " ${BIYellow}│ ${BIWhite}Current Domain  :  ${BIWhite}$(cat /etc/xray/domain)${NC}"
 echo -e " ${BIYellow}│ ${BIWhite}NS Domain       :  ${BIYellow}$(cat /root/nsdomain)${NC}"
 echo -e " ${BIYellow}│ ${BIWhite}IP-VPS          :  ${BIRed}$IPVPS "
-echo -e " ${BIYellow}└─────────────────────────────────────────────────────┘" | lolcat
+echo -e " ${BIYellow}└─────────────────────────────────────────────────────┘"
 echo -e "     ${BIWhite} SSH ${NC}: $ressh"" ${BIWhite} NGINX ${NC}: $resngx"" ${BIWhite}  XRAY ${NC}: $resv2r"" ${BIWhite} TROJAN ${NC}: $resv2r${NC}"
 echo -e "   ${BIWhite}     STUNNEL ${NC}: $resst" "${BIWhite} DROPBEAR ${NC}: $resdbr" "${BIWhite} SSH-WS ${NC}: $ressshws${NC}"
-echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
+echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐"
 echo -e "${BIYellow} │                       OTHER MENU                    │ "
-echo -e "${BIYellow} │=====================================================│" | lolcat
+echo -e "${BIYellow} │=====================================================│"
 echo -e "${BIYellow} │${NC}${BIYellow} [•1]${NC}📨 ${BIWhite} SSH${NC}             " "${BIYellow}[•7]${NC}📨 ${BIWhite} CHECK RUNNING${NC}"
 echo -e "${BIYellow} │${NC}${BIYellow} [•2]${NC}📨 ${BIWhite} VMESS${NC}           " "${BIYellow}[•8]${NC}📨 ${BIWhite} RESTR SERVICE${NC}"       
 echo -e "${BIYellow} │${NC}${BIYellow} [•3]${NC}📨 ${BIWhite} VLESS${NC}           " "${BIYellow}[•9]${NC}📨 ${BIWhite} BACKUP MENU${NC}  "             
 echo -e "${BIYellow} │${NC}${BIYellow} [•4]${NC}📨 ${BIWhite} TROJAN-GO${NC}       " "${BIYellow}[10]${NC}📨 ${BIWhite} CLEAR Ram${NC} "           
 echo -e "${BIYellow} │${NC}${BIYellow} [•5]${NC}📨 ${BIWhite} TROJAN-WS${NC}       " "${BIYellow}[11]${NC}📨 ${BIWhite} UPDATE${NC} "
 echo -e "${BIYellow} │${NC}${BIYellow} [•6]${NC}📨 ${BIWhite} MENU SETINGS${NC}    " "${BIYellow}[12]${NC}📨 ${BIWhite} check port${NC} "
-echo -e "${BIYellow} └──────────────────────────────────────────────────────┘" | lolcat 
-echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
+echo -e "${BIYellow} └──────────────────────────────────────────────────────┘"
+echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐"
 echo -e "${BIYellow} │ \033[0m ${BOLD}${GREEN}XXX${BIYellow} SSH${GREEN}  XXX  ${BIYellow}VMESS  ${GREEN}XXX  ${BIYellow}VLESS  ${GREEN}XXX  ${BIYellow}TROJAN${GREEN} XXX ${NC} "
 echo -e "${BIYellow} │ \033[0m ${Blue}     $ssh1          $vma           $vla            $tra              "
-echo -e "${BIYellow} └─────────────────────────────────────────────────────┘" | lolcat
-echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐" | lolcat
+echo -e "${BIYellow} └─────────────────────────────────────────────────────┘"
+echo -e "${BIYellow} ┌─────────────────────────────────────────────────────┐"
 echo -e "${BIYellow} │$NC ${BIYellow}HARI ini${NC}: ${BIYellow}$ttoday$NC ${BIYellow}KEMARIN${NC}: ${red}$tyest$NC ${BIYellow}BULAN${NC}: ${BIYellow}$tmon$NC $NC"
-echo -e "${BIYellow} └─────────────────────────────────────────────────────┘" | lolcat
+echo -e "${BIYellow} └─────────────────────────────────────────────────────┘"
 echo -e "${BIYellow} ┌─────────────────────────────────────┐"
 echo -e "${BIYellow} │ Version      ${NC} : ${BIPurple} Ver4. Last Update"
 echo -e "${BIYellow} │ User       ${NC}   : ${BIWhite} $Name"
 echo -e "${BIYellow} │ Expiry script${NC} : ${BIYellow} $useexp"
 e-e cho "${BIYellow} └─────────────────────────────────────┘"
-e-e cho""
-e-e cho""
+echo -e "
+echo -e "
 read -p " Select menu : " opt
 echo -e ""
 case $opt in
