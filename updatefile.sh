@@ -99,6 +99,7 @@ wget -O restarts "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/rest
 wget -O bw "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/bw.sh"
 wget -O m-helium "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/m-helium.sh"
 wget -O autobackup "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/autobackup"
+wget -O updatefile "https://raw.githubusercontent.com/KhaiVpn767/v4/main/updatefile.sh"
 
 
 # change port
@@ -107,14 +108,12 @@ wget -O autobackup "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/au
 # file tambahan
 
 wget -O xp "https://raw.githubusercontent.com/KhaiVpn767/v4/main/ssh/xp.sh"
-
 wget -O sshws "https://raw.githubusercontent.com/KhaiVpn767/v4/main/ssh/sshws.sh"
 wget -O status "https://raw.githubusercontent.com/KhaiVpn767/v4/main/status.sh"
 wget -O menu-backup "https://raw.githubusercontent.com/KhaiVpn767/v4/main/backup/menu-backup.sh"
 wget -O backup "https://raw.githubusercontent.com/KhaiVpn767/v4/main/backup/backup.sh"
 wget -O restore "https://raw.githubusercontent.com/KhaiVpn767/v4/main/backup/restore.sh"
 wget -O bot "https://raw.githubusercontent.com/KhaiVpn767/v4/main/bot.sh"
-
 wget -O jam "https://raw.githubusercontent.com/KhaiVpn767/v4/main/jam.sh"
 
 chmod +x menu
@@ -155,6 +154,7 @@ chmod +x restarts
 chmod +x bw
 chmod +x m-helium
 chmod +x autobackup
+chmod +x updatefile
 
 
 chmod +x xp
