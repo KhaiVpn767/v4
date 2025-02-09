@@ -53,7 +53,6 @@ rm -rf jam
 rm -rf up
 rm -rf trialvless
 rm -rf addvless
-#rm -rf bot
 
 # download script
 cd /usr/bin
@@ -113,7 +112,7 @@ wget -O status "https://raw.githubusercontent.com/KhaiVpn767/v4/main/status.sh"
 wget -O menu-backup "https://raw.githubusercontent.com/KhaiVpn767/v4/main/backup/menu-backup.sh"
 wget -O backup "https://raw.githubusercontent.com/KhaiVpn767/v4/main/backup/backup.sh"
 wget -O restore "https://raw.githubusercontent.com/KhaiVpn767/v4/main/backup/restore.sh"
-wget -O bot "https://raw.githubusercontent.com/KhaiVpn767/v4/main/bot.sh"
+wget -O bot "https://raw.githubusercontent.com/KhaiVpn767/v4/main/bot/bot.sh"
 wget -O jam "https://raw.githubusercontent.com/KhaiVpn767/v4/main/jam.sh"
 
 chmod +x menu
@@ -163,6 +162,7 @@ chmod +x status
 chmod +x menu-backup
 chmod +x backup
 chmod +x restore
+chmod +x bot
 chmod +x jam
 echo -e " [INFO] Update Successfully"
 sleep 2
