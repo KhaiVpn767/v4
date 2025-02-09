@@ -215,7 +215,7 @@ IPVPS=$(curl -s ipinfo.io/ip )
 clear
 echo -e ""
 echo -e ""
-echo -e "               ${BIRed}Premium Script : ${BIPurple}khaiVPN!${NC}"
+echo -e "               ${BIRed}Premium Script : ${BIYellow}khaiVPN!${NC}"
 echo -e "              ${BIPurple} SCRIPT MULTI V4.0 STABILE " | lolcat
 echo -e "${BIRed} ┌─────────────────────────────────────────────────────┐"
 echo -e "${BIRed} │                     Informations                    |"
