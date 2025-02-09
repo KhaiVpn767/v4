@@ -327,8 +327,7 @@ wget -O status "https://raw.githubusercontent.com/KhaiVpn767/v4/main/status.sh"
 wget -O menu-backup "https://raw.githubusercontent.com/KhaiVpn767/v4/main/backup/menu-backup.sh"
 wget -O backup "https://raw.githubusercontent.com/KhaiVpn767/v4/main/backup/backup.sh"
 wget -O restore "https://raw.githubusercontent.com/KhaiVpn767/v4/main/backup/restore.sh"
-wget -O bot "https://raw.githubusercontent.com/KhaiVpn767/v4/main/bot.sh"
-
+wget -O bot "https://raw.githubusercontent.com/KhaiVpn767/v4/main/bot/bot.sh"
 wget -O jam "https://raw.githubusercontent.com/KhaiVpn767/v4/main/jam.sh"
 wget -O udp "https://raw.githubusercontent.com/KhaiVpn767/v4/main/udp/udp.sh"
 
@@ -382,6 +381,7 @@ chmod +x status
 chmod +x menu-backup
 chmod +x backup
 chmod +x restore
+chmod +x bot
 chmod +x jam
 chmod +x udp
 cd
