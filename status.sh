@@ -1,9 +1,8 @@
 #!/bin/bash
 # // Exporting Language to UTF-8
-export LC_ALL='en_US.UTF-8'
+
 export LANG='en_US.UTF-8'
 export LANGUAGE='en_US.UTF-8'
-export LC_CTYPE='en_US.utf8'
 
 # // Export Color & Information
 export RED='\033[0;31m'
@@ -33,7 +32,7 @@ export Server_URL="autosc.me/aio"
 export Server_Port="443"
 export Server_IP="underfined"
 export Script_Mode="Stable"
-export Auther="khaiVPN"
+export Auther="Ramli5941"
 export RED_BG='\e[41m'
 
 # // Exporting IP Address
@@ -126,8 +125,8 @@ clear;clear;clear
 
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo -e "                ${YELLOW}(${NC}${GREEN} STATUS SERVICE INFORMATION ${NC}${YELLOW})${NC}"
-echo -e "                  CREATOR : ${GREEN} khai ${NC}${YELLOW}${NC} ${GREEN}VPN ${NC}${YELLOW}${NC}"
-echo -e "       © Copyright By khaiVPN ${YELLOW}(${NC} TUNEL ${YELLOW})${NC}"
+echo -e "                  CREATOR : ${GREEN} Ramli ${NC}${YELLOW}${NC} ${GREEN}VPN ${NC}${YELLOW}${NC}"
+echo -e "       © Copyright By Ramli ${YELLOW}(${NC} TUNEL ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
 echo -e "${RED_BG}                     Sytem Information                    ${NC}"
