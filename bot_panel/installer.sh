@@ -65,7 +65,7 @@ exit 0
 fi
 
 ipes=$(curl -sS ipv4.icanhazip.com)
-surat=$(curl -sS https://raw.githubusercontent.com/KhaiVpn767/access/main/bot | grep -w 139.162.32.40 | awk '{print $4}'  )
+surat=$(curl -sS https://raw.githubusercontent.com/KhaiVpn767/permission/main/ipmini | grep -w 139.162.32.40 | awk '{print $4}'  )
 if [[ "$surat" = "true" ]]; then
 echo -ne
 else
