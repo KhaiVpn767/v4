@@ -16,7 +16,7 @@ y="\033[1;93m"
 g="\033[1;92m"
 r="\033[1;91m"
 
-REPO="https://raw.githubusercontent.com/KhaiVpn767/permission/main/ipmini"
+REPO="https://raw.githubusercontent.com/KhaiVpn767/V5/main/bot/"
 domain=$(cat /etc/xray/domain)
 #install
 apt update && apt upgrade
