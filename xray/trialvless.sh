@@ -20,16 +20,15 @@ export vlesslink1="vless://${uuid}@${sts}${domain}:443?path=/vless&security=tls&
 export vlesslink2="vless://${uuid}@${sts}${domain}:80?path=/vless&encryption=none&host=$sni&type=ws#${user}"
 export vlesslink3="vless://${uuid}@104.16.210.12:80?path=/vless&encryption=none&host=www.speedtest.net.${domain}&type=ws#DIGI-EXP-${user}"
 export vlesslink4="vless://${uuid}@api.useinsider.com:80?path=/vless&encryption=none&host=${sts}${domain}&type=ws#DIGI-APN-${user}"
-export vlesslink5="vless://${uuid}@162.159.134.61:80?path=/vless&encryption=none&host=${sts}${domain}&type=ws#DIGI-BOSSTER-3MBPS-${user}"
-export vlesslink6="vless://${uuid}@172.66.40.170:80?path=/vless&encryption=none&host=cdn.opensignal.com.${domain}&type=ws#DIGI-BOSSTER-6MBPS-12MBPS-${user}"
+export vlesslink5="vless://${uuid}@162.159.134.61:80?path=/vless&encryption=none&host=${sts}${domain}&type=ws#DIGI-BOSSTER-${user}"
+export vlesslink6="vless://${uuid}@172.66.40.170:80?path=/vless&encryption=none&host=cdn.opensignal.com.${domain}&type=ws#DIGI-BOSSTER-V2-${user}"
 export vlesslink7="vless://${uuid}@${domain}:80?path=/vless&encryption=none&host=m.pubgmobile.com&type=ws#UMOBILE-FUNZ-${user}"
 export vlesslink8="vless://${uuid}@104.18.8.53:80?path=/vless&encryption=none&host=${domain}&type=ws#UMOBILE-${user}"
 export vlesslink9="vless://${uuid}@104.17.113.188:80?path=/vless&encryption=none&host=eurohealthobservatory.who.int.${domain}&type=ws#YES-${user}"
 export vlesslink10="vless://${uuid}@104.17.147.22:80?path=/vless&encryption=none&host=www.speedtest.net.${domain}&type=ws#SELCOM-BOSTER-3MBPS-${user}"
-export vlesslink11="vless://${uuid}@104.17.10.12:80?path=/vless&encryption=none&host=cdn.who.int.${domain}&type=ws#UNIFI-Bebas-${user}"
-export vlesslink12="vless://${uuid}@speedtest.unifi.com.my.${domain}:80?path=/vless&encryption=none&host=&type=ws#Uni5G-${user}"
-export vlesslink13="vless://${uuid}@104.18.6.178:80?path=/vless&encryption=none&host=speedtest-univ-results-api.speedtest.net.${domain}&type=ws#MAXIS-FREEZE-${user}"
-export vlesslink14="vless://${uuid}@cdn.opensignal.com:80?path=/vless&encryption=none&host=cdn.opensignal.com.${domain}&type=ws#MAXIS-FREEZE-V2-${user}"
+export vlesslink11="vless://${uuid}@162.159.133.61:80?path=ws://${domain}/vless&encryption=none&host=www.speedtest.net&type=ws#UNI5G-${user}"
+export vlesslink12="vless://${uuid}@104.18.6.178:80?path=/vless&encryption=none&host=speedtest-univ-results-api.speedtest.net.${domain}&type=ws#MAXIS-FREEZE-${user}"
+export vlesslink13="vless://${uuid}@cdn.opensignal.com:80?path=/vless&encryption=none&host=cdn.opensignal.com.${domain}&type=ws#MAXIS-FREEZE-V2-${user}"}"
 systemctl restart xray
 clear
 vless1="$(echo $vlesslink1 | base64 -w 0)"
@@ -107,18 +106,15 @@ echo -e "${vlesslink9}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "${OR}☉───────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Link SELCOM-BOSTER-3MBPS : " | tee -a /etc/xray/log-create-${user}.log
 echo -e "${vlesslink10}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "${OR}☉───────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
-echo -e "Link UNIFI-Bebas : " | tee -a /etc/xray/log-create-${user}.log
-echo -e "${vlesslink11}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "${OR}☉──────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Link UNIFI-Uni5G : " | tee -a /etc/xray/log-create-${user}.log
-echo -e "${vlesslink12}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${vlesslink11}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "${OR}☉───────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Link MAXIS-FREEZE : " | tee -a /etc/xray/log-create-${user}.log
-echo -e "${vlesslink13}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${vlesslink12}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "${OR}☉───────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "Link MAXIS-FREEZE-V2 : " | tee -a /etc/xray/log-create-${user}.log
-echo -e "${vlesslink14}" | tee -a /etc/xray/log-create-${user}.log
+echo -e "${vlesslink13}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "${OR}☉───────────────────────────☉${NC}" | tee -a /etc/xray/log-create-${user}.log
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "\e[33m name      : ${user}" | tee -a /etc/log-create-user.log
