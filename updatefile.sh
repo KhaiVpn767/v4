@@ -115,6 +115,7 @@ wget -O restore "https://raw.githubusercontent.com/KhaiVpn767/v4/main/backup/res
 wget -O bot "https://raw.githubusercontent.com/KhaiVpn767/v4/main/bot/bot.sh"
 wget -O jam "https://raw.githubusercontent.com/KhaiVpn767/v4/main/jam.sh"
 wget -O ram "https://raw.githubusercontent.com/KhaiVpn767/v4/main/menu/ram.sh"
+wget -O dns "https://raw.githubusercontent.com/KhaiVpn767/v4/main/dns.sh"
 
 chmod +x menu
 chmod +x menu-vmess
@@ -166,6 +167,7 @@ chmod +x restore
 chmod +x bot
 chmod +x jam
 chmod +x ram
+chmod +x dns
 echo -e " [INFO] Update Successfully"
 sleep 2
 exit
