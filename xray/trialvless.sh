@@ -1,7 +1,6 @@
 domain=$(cat /etc/xray/domain)
 TIMES="10"
-CHATID=$(cat /etc/id)
-KEY=$(cat /etc/token)
+
 URL="https://api.telegram.org/bot$KEY/sendMessage"
 
 tls="$(cat ~/log-install.txt | grep -w "Vless TLS" | cut -d: -f2|sed 's/ //g')"
