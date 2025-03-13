@@ -28,7 +28,7 @@ export vlesslink9="vless://${uuid}@104.17.113.188:80?path=/vless&encryption=none
 export vlesslink10="vless://${uuid}@104.17.147.22:80?path=/vless&encryption=none&host=www.speedtest.net.${domain}&type=ws#SELCOM-BOSTER-3MBPS-${user}"
 export vlesslink11="vless://${uuid}@162.159.133.61:80?path=ws://${domain}/vless&encryption=none&host=www.speedtest.net&type=ws#UNI5G-${user}"
 export vlesslink12="vless://${uuid}@104.18.6.178:80?path=/vless&encryption=none&host=speedtest-univ-results-api.speedtest.net.${domain}&type=ws#MAXIS-FREEZE-${user}"
-export vlesslink13="vless://${uuid}@cdn.opensignal.com:80?path=/vless&encryption=none&host=cdn.opensignal.com.${domain}&type=ws#MAXIS-FREEZE-V2-${user}"}"
+export vlesslink13="vless://${uuid}@cdn.opensignal.com:80?path=/vless&encryption=none&host=cdn.opensignal.com.${domain}&type=ws#MAXIS-FREEZE-V2-${user}"
 systemctl restart xray
 clear
 vless1="$(echo $vlesslink1 | base64 -w 0)"
