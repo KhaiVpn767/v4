@@ -103,7 +103,7 @@ case $opt in
 3) clear ; renew-vless ; exit ;;
 4) clear ; del-vless ; exit ;;
 5) clear ; cek-vless ; exit ;;
-6) clear ; wget https://raw.githubusercontent.com/KhaiVpn767/v4/refs/heads/main/xray/addvls.sh && chmod +x addvls.sh && ./addvls.sh ; exit ;;
+6) clear ; addvls ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo "Anda salah tekan " ; sleep 1 ; menu-ssh ;;
