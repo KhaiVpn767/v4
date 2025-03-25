@@ -299,7 +299,7 @@ else
 fi
 clear
 echo -e "\e[33m═════════════════════════════════════════════════════\033[0m${NC}"
-echo -e "${red}              ⇱ INFORMASI VPS ⇲                        \E[0m"
+echo -e "${red}                   ⇱ INFORMASI VPS ⇲                        \E[0m"
 echo -e "\e[33m═════════════════════════════════════════════════════\033[0m${NC}"
 echo -e "${Kcyan} ${NC} ${white}ISP VPS   ${NC}: $ISP"
 echo -e "${Kcyan} ${NC} ${white}Time Zone ${NC}: $WKT"
@@ -312,7 +312,7 @@ echo -e "${Kcyan} ${NC} ${white}Xpired    ${NC}: $Exp"
 echo -e "\e[33m═════════════════════════════════════════════════════\033[0m"
 echo  -e "${Kcyan}│${MK} SSH : $ssh1 │ VMES : $vma │ VLES : $vla │ TROJAN : $tra"
 echo -e "\e[33m═════════════════════════════════════════════════════\033[0m"
-echo -e "\E[44;1;39m          ${whiteK}SCRIPT VPS BY khaiVPN              \E[0m"
+echo -e "\E[35;1;33m               ${whiteK}SCRIPT VPS BY khaiVPN              \E[0m"
 echo -e "\e[33m═════════════════════════════════════════════════════\033[0m"
 echo -e "${red}                     [ PANEL MENU ]                         ${NC}"
 echo -e "\e[33m═════════════════════════════════════════════════════\033[0m"
