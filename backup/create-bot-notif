@@ -14,7 +14,7 @@ BGX="\033[42m"
 ipsaya=$(curl -sS ipv4.icanhazip.com)
 data_server=$(curl -v --insecure --silent https://google.com/ 2>&1 | grep Date | sed -e 's/< Date: //')
 date_list=$(date +"%Y-%m-%d" -d "$data_server")
-data_ip="https://raw.githubusercontent.com/KhaiVpn767/izinsc/main/ip"
+data_ip="https://raw.githubusercontent.com/KhaiVpn767/permission/refs/heads/main/ipmini"
 checking_sc() {
   useexp=$(wget -qO- $data_ip | grep $ipsaya | awk '{print $3}')
   if [[ $useexp == "lifetime" || $useexp == "Lifetime" ]]; then
